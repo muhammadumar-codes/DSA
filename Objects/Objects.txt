@@ -1,0 +1,73 @@
+OBJECTS-
+
+const student = {
+  names: "Umarkhan",
+  fatherName: "Gul wali Khan",
+  address: { citys: "Peshawer", Hobbies: ["first", "secounda"] },
+  show() {
+    console.log(student.address?.citys);
+  },
+};
+ 
+student.show();
+const {
+  names,
+  fatherName,
+//   how  to distructure the nested array in object
+  address: { citys,Hobbies:[f,g,h] },
+} = student;
+ //it is the disturcture of   objects
+ console.log(f,g,h)
+console.log(citys);
+console.log(fatherName);
+
+// console.log(names)
+// console.log(student.names);
+// console.log(student["names"]);
+
+
+-----------------------------------------------------
+var name="Gul wali Khan"
+const user={
+    name:"Umar khan",
+    show:function(){
+      console.log(this.name)
+        
+    }
+}
+user.show();
+
+console.log(this)
+
+
+-------------------------------------------------------------------------
+Interview Question 
+
+// Question what  is the deepCopy
+// it mean to copy all the Object or array to another  varbble not to connect  buy refrence mean it is passs by value
+// for examples
+
+const student={
+    names:"UmarKhan",
+    fatherName:"Gul khan",
+    address:{
+        city:"Peshawer"
+    }
+}
+
+const studentCopy=structuredClone(student);//Note:  it make it full copy which is callld deep copy
+                                                //if we use the spread operator  it also take teh copy but not for nested
+                                                //using equal mean assign to the address to another varibles 
+                                                
+
+studentCopy.address.city="Gul Bahar"
+
+console.log(`stude  nt.address.city  ${student.address.city }`);
+console.log(`studentCopy.address.city ${studentCopy.address.city}`)
+
+
+
+
+
+
+

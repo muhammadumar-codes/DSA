@@ -1,0 +1,146 @@
+// Plain  Addition
+let a = 3;
+let b = 5;
+let sum = a + b; // 8
+
+'2' + 3        // "23"
+2 + '3'        // "23"
+'2' + '3'      // "23"
+
+
+-----------------------------------------------
+
+//Implicit coercion Rules  ?
+
+
+Implicit coercion rules (common cases)
+
++ with a string does concatenation: 'a' + 1 -> 'a1'.
+
+-, *, /, % force numeric conversion: '5' - 2 → 3.
+
+== (loose equality) performs type coercion; avoid it. Prefer === (strict equality).
+
+null == undefined → true
+
+0 == false → true
+
+'' == 0 → true
+
+NaN == NaN → false (NaN is not equal to any value)
+
+Number('') → 0, but parseInt('') → NaN.
+
+Best practice: Use explicit conversion: Number(), parseInt(...,10) or unary +, and use === unless you intentionally want coercion.
+
+
+-----------------------------------------------
+
+//Swapping Numbers 
+
+Methods 1
+
+let a = 34;
+let b = 50;
+let c=60;
+let d;
+
+console.log(a,b,c) 
+
+d=a;
+a=b;
+b=c;
+c=d;
+
+console.log(a,b,c )
+
+Methods 2:
+let a = 34;
+let b = 50;
+console.log(a, b);
+[a, b] = [b, a];
+console.log(a, b);
+
+Methods  3:
+
+let a = 5;
+let b = 4;
+console.log(a,b)
+a = a + b;
+b=a-b;
+a=a-b;
+console.log(a,b)
+
+____________________________________________
+Now in this Sesssion  we have studied teh follwing
+
++ - * / % ** (** is exponentiation)
+
+=, +=, -=, *=, /=, %=, **=
+
+
++value → convert to Number
+
+-value → negate (also converts)
+
+++, -- → increment/decrement (prefix ++a, postfix a++ differ)
+
+typeof value → returns string type ("number", "string", "object", "function", "undefined", "bigint", "symbol")
+
+delete obj.prop → deletes a property (only meaningful for objects)
+
+void expr → evaluates expr and returns undefined
+
+
+<, >, <=, >= — numeric/string comparisons.
+in — property in object: 'x' in obj.
+instanceof — prototype chain check.
+
+
+&& (AND), || (OR), ! (NOT)
+
+Short-circuiting behavior: a && b returns a if a is falsy, otherwise b; a || b returns a if a is truthy, otherwise b. This is important for idiomatic JS like value = data || defaultValue
+
+
+Operator precedence (short)
+
+Higher precedence evaluated first. Some important points:
+
+() parentheses highest
+
+Unary + - ++ -- typeof next
+
+** then * / % then + -
+
+< <= > >= then == === then && then || then ? : then assignment =.
+(When in doubt, add parentheses.)
+
+
+
+
+5 => Equality & coercion pitfalls — quick cheat sheet
+
+Use === and !== to avoid coercion surprises.
+
+null == undefined → true
+
+[] == '' → true
+
+[] == 0 → true
+
+NaN !== NaN (NaN is not equal to itself). Use Number.isNaN() to check NaN.
+
+Number('') → 0, parseInt('') → NaN.
+
+parseInt('08') — always use parseInt('08', 10)
+
+//now to study all math logic question 
+
+
+
+OTP:
+
+let value=Math.floor((Math.random()*1000)+1000)
+console.log(value)
+
+

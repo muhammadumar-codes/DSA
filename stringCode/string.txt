@@ -1,0 +1,375 @@
+
+// what is string
+
+ What is a String ?
+
+A string is a sequence of characters enclosed in quotes.
+It can contain:
+
+letters
+
+numbers
+
+symbols
+
+whitespace
+
+ Example:
+
+let name = "Janii";
+let message = 'I love JavaScript 💖';
+let info = `My name is ${name}`;
+
+
+using simple quotes:
+
+let  name="umar"
+let  name='umar'
+let s3 = `Hello ${s2}!`;
+console.log(s3); // Hello World!
+
+
+-------------------------------------------------------------------------------------------------------------
+Index:
+const str="umar"
+console.let(str[0])
+
+-------------------------------------------------------------------------------------------------------------
+
+Length:
+
+console.log(str.length); // 5
+
+-------------------------------------------------------------------------------------------------------------
+Looping :
+let str = "Umar Khan";
+for (const element of str) {
+  if (element === "U") {
+    console.log("The name will be Umar");
+  } 
+}
+
+Using For loop:
+
+const str = "Hellow World";
+for (let i = 0; i <= str.length; i++) {
+  console.log(str[i]);
+}
+
+
+-------------------------------------------------------------------------------------------------------------
+ Common String Escape Characters :
+
+
+| Escape | Meaning      | Example              |
+| ------ | ------------ | -------------------- |
+| `\'`   | Single quote | `'It\'s fine'`       |
+| `\"`   | Double quote | `"He said \"Hi\""`   |
+| `\\`   | Backslash    | `"C:\\Users\\Janii"` |
+| `\n`   | New line     | `"Hello\nWorld"`     |
+| `\t`   | Tab          | `"Hello\tWorld"`     |
+
+-------------------------------------------------------------------------------------------------------------
+
+CharAt 
+let str = "Janii";
+console.log(str.charAt(2)); // n
+
+-------------------------------------------------------------------------------------------------------------
+Changing Cases:
+
+console.log("This is Uppercase".toUpperCase());
+console.log("This is Lowercase".toLowerCase())
+
+-------------------------------------------------------------------------------------------------------------
+=>  Index of :
+
+const prompt=require("prompt-sync")();
+
+const names = prompt("Enter  Your Names !");
+if (!names) {
+ process.stdout.write("Please Write Correct Name !")
+} else {
+  const char = prompt("Enter Your char");
+  const charIndex=names.indexOf(char)
+  console.log(`The Index is :${charIndex}`);
+}
+
+
+-------------------------------------------------------------------------------------------------------------
+
+LAST INDEX OF:
+
+const  str="Umar khan afridi"
+console.log(`The lecture  :=>`,str.lastIndexOf("afridi"));
+
+------------------------------------------------------------------------------------------------------------
+
+INCLUDE:
+
+const str="Umar Khan"
+const result=str.includes("Khan")
+console.log(str.includes("@"))
+console.log(result);
+
+Examples:
+
+const email = "umerkhan12afridi@gmail.com";
+if (!email.includes("@")) {
+  console.log("Email is Not Include Give Correct Emaill to it ");
+} else {
+  console.log("Email is Correct  ");
+}
+
+
+-------------------------------------------------------------------------------------------------------------
+
+Start With  && End With ;
+
+const first = "Hellow Dear !";
+console.log(` Start With :${first.startsWith("Hellow Dear !")}`);
+console.log(`Ends With :${first.endsWith("Dear !")}`);
+
+------------------------------------------------------------------------------------------------------------
+
+Searching :
+const first ="i love javascript"
+const  result=first.search(`love`)
+console.log(first)
+console.log(result);
+
+
+
+-------------------------------------------------------------------------------------------------------------
+Match :
+const str = " Morning  Hellow Good  Hellow Evening";
+const result = str.match("Hellow");
+for (let i = 0; i < result.length; i++) {
+  console.log(`The Result is ${result[i]}`);
+}
+
+
+-------------------------------------------------------------------------------------------------------------
+Slice ?:
+
+const str = "Hellow world"
+const result=str.slice(0,3)
+console.log(result);
+
+
+=> it is also take the Negative Numbers But it will  start from last Position
+
+const str="Umar Khan";
+const result=str.slice(-3)
+console.log(result);
+
+
+
+=> It accept also the one parameter for up to end level
+
+const first="Good Morning Sir !"
+const  result=first.slice(3)
+console.log(result);
+
+
+-------------------------------------------------------------------------------------------------------------
+
+Concat :
+
+const str ="Hello"
+const result=str.concat(" ","Muhammad"," ","Sir")
+console.log(result);
+
+
+-------------------------------------------------------------------------------------------------------------
+CHAR AT:
+const  responce="ABCDEFGHIJKLMNOPQRSTUVWXYHZ"
+console.log(responce.charAt(3));
+
+-------------------------------------------------------------------------------------------------------------
+CHAR CODE AT
+const aski=responce.charCodeAt(0)
+  
+-------------------------------------------------------------------------------------------------------------
+split :
+
+it is used to split the string to the array:
+
+
+const first ="string Hello This is ali"
+const  result=first.split(" ")
+for (const element of result) {
+    console.log(element);
+    
+    
+}
+
+-------------------------------------------------------------------------------------------------------------
+Replace:
+
+const str="First"
+const result=str.replace("First","umar")
+console.log(result);
+
+-------------------------------------------------------------------------------------------------------------
+
+const str="This is my string  coding";
+for (let i=0;i< str.length;i++){
+   const charCode=str.charCodeAt(i) //it is convertig to aschi codinng
+   console.log(String.fromCharCode(charCode)); // we back convert it to string character
+   
+    
+}
+-------------------------------------------------------------------------------------------------------------
+ Reverse The string :
+
+ let names= "Muhammad-Umar";
+let  reverse =" "
+for(let i =names.length;i>=0;i--){
+   reverse+=names.charAt(i)
+    
+}
+console.log(reverse);
+
+------------------------------------------------------------------------------------------------------------
+Code For Palendram Number "
+
+function palindramChecker(params) {
+  let str = prompt("Enter What is in Your Mind !");
+  let reverse = "";
+  if (!str) {
+    console.log("Invlide Input !");
+    return;
+  }
+  for (let i = str.length - 1; i >= 0; i--) {
+    reverse += str.charAt(i);
+  }
+
+  const palindram =
+    reverse === str ? "This is Palenram Number !" : "Not Palendram";
+  console.log(palindram);
+}
+
+palindramChecker();
+
+---------------------------------------------------------------------------------------------------------
+
+Best Way The Palendram  :
+
+function PalendramChecker() {
+  const input = prompt("Enter Your Value !");
+  let palendram = true;
+  if (!input) {
+    console.log("Invlide Input !");
+    return;
+  } else {
+    let i = 0,
+      j = input.length - 1;
+    while (i < j) {
+      if (input.charAt(i) !== input.charAt(j)) {
+        palendram = false;
+        break;
+      }
+    }
+    palendram = true;
+  }
+
+  // condition to check the palendram value.
+
+  if (palendram) console.log("This is a Palendram.")
+  else console.log("This is not Palendram.")
+}
+
+PalendramChecker();
+
+ ---------------------------------------------------------------------------------------------------------
+
+Question: How to toggle the capital letter  to small lett er annd small lett er to capital letter ?
+
+
+function toggleString() {
+  let toggle = "";
+  
+  
+  let str = prompt("Enter Your String To Toggle !");
+  if (!str) {
+    console.log("Please Enter Your Valid Value");
+    return;
+  } else {
+    for (let i = 0; i <= str.length - 1; i++) {
+      let ch = str.charCodeAt(i);
+      if (ch >= 65 && ch <= 97) {
+        toggle += String.fromCharCode(ch + 32);
+      } else if (ch >= 97 && ch <= 122) {
+        toggle += String.fromCharCode(ch - 32);
+        
+      }
+    }
+  }
+
+  console.log(toggle);
+}
+toggleString();
+
+ ---------------------------------------------------------------------------------------------------------
+
+ Question:How to check count character how much time it cames
+
+ function charCounter() {
+  const arr = new Array(128).fill(0);
+  const s = prompt("Enter Your What You Want  !");
+  if (!s) {
+    alert("Invlide input !");
+    return;
+  } else {
+    for (let i = 0; i < s.length - 1; i++) {
+      const index = s.charCodeAt(i);
+      arr[index] += 1;
+    }
+
+    for (let i = 0; i <= arr.length; i++) {
+      if (arr[i] > 0) {
+        console.log(`${String.fromCharCode(i)},  =: Appear at =: ${arr[i]}`);
+      }
+    }
+  }
+}
+charCounter();
+
+
+---------------------------------------------------------------------------------------------------------
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,61 @@
+Question  :
+ How to Bring the First index value to last indext and then do increasment in remaing values 
+
+let arr = [1, 2, 3, 4, 5]
+let copy = arr[0]
+for (let i = 0; i <= arr.length - 1; i++) {
+  arr[i] = arr[i + 1]
+}
+arr[arr.length - 1] = copy
+console.log(arr)
+
+
+OutPut:
+[2,3,4,5,1]
+
+-----------------------------------------------------------------
+
+Question: [6,1,2,3,4,5]
+
+//source code .
+
+
+
+function lastToFirst(array) {
+  if (!Array.isArray(array) || !array || array.length === 0) {
+    console.log('invalid ...')
+    return
+  } else {
+    let arr = array
+    let copy = arr.length
+    for (let i = arr.length - 1; i > 0; i--) {
+      arr[i] = arr[i - 1]
+    }
+    arr[0] = copy
+    console.log(arr)
+  }
+}
+lastToFirst([1, 2, 3, 4, 5, 6])
+
+
+
+
+-----------------------------------------------------------------
+
+
+// problem to solve it:
+[3, 4, 5, 1, 2]
+
+let array = [1, 2, 3, 4, 5]
+let copy = array[0]
+let copyTwo = array[0]
+for (let i = 0; i < array.length; i++) {
+  for (let j = 0; i < array.length; j++) {
+    array[i] = array[i + 1]
+  }
+  array[j] = array[j + 1]
+}
+array[array.length - 1] = copy
+array[array.length - 1] = copyTwo
+console.log(array)
+

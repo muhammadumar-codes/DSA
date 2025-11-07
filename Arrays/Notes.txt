@@ -1,0 +1,332 @@
+By Def : 
+Array is the Linear Datastructure which store multiple values on continous manners 
+Linear Mean  => to get the Data next to next Like  
+
+ 
+
+const  array =[]
+array.push("Hellow")
+array.push(1) //it is  to putting  teh value ot it 
+array.pop()
+array.pop() // it is  delete teh value  .
+console.log(array[0]);// accessihig of index.
+
+
+
+// Question :How to assign the vlue ot 5 index in array
+
+// Yes , it is possible to keep the value on 5  index
+array[5]=100000;
+console.log(array);
+
+
+// Question : Can we make the array by new Array 
+// yes
+
+const first=new Array(3)//  it is them point Here we have define the length of array...
+first.push("HI")
+console.log(first)
+
+
+//simple  Example to take the 5 amount to store it in array
+let ans = [];
+for (let i = 1; i <= 5; i++) {
+  let value = Number(prompt("Enter Your value ."));
+  ans.push(value);
+}
+const totalAmount = ans.reduce((acc, curr) => {
+  return acc + curr;
+},0);
+
+console.log("The Total Amount of array is  => ", totalAmount);
+-------------------------------------------------------------------------------------------------
+
+Question : How to sum of n elments in array
+
+let sum = 0;
+const array = [2, 3,5 ];
+for (let i = 0; i < array.length; i++) {
+sum+=array[i];
+}
+console.log(sum);
+
+-------------------------------------------------------------------------------------------------
+// Quetion How to = sum  fo the elments
+// 2nd methods to solev this problem
+
+
+const array = [2, 3, 5, 45, 5];
+const sum = array.reduce((acc, curr) => {
+  return acc + curr;
+}, 0);
+console.log("The sum of  N element is   : " , sum)
+-------------------------------------------------------------------------------------------------
+Question: How to check the maximum number in the array :
+Solution : instead of ternary operator you can also used the if condition....
+function Maximum(arr) {
+  if (Array.isArray(arr) && !arr) {
+    console.log('Please Pass the Array to parameter !')
+  }
+  let max = arr[0]
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > max) {
+      max = arr[i]
+    }
+  }
+  console.log(`The maximum value is ${max}`)
+}
+Maximum('String')
+
+-------------------------------------------------------------------------
+Question : How to check the minemum number ?
+
+let array = [90, 40, 20, 4,"2", 0];
+let manimum = array[0];
+for (let i = 1;i<array.length ; i++) {
+  array[i]<array[0]?manimum=array[i]:"Not found"
+}
+console.log(manimum);
+
+-------------------------------------------------------------------------
+Question :How to check the 2nd maximum Number :
+
+
+let array = [10, 30, 50, 60, 70];
+let max = Math.max(array[0], array[1]);
+let sMax = Math.min(array[0], array[1]);
+
+for (let i = 2; i <= array.length; i++) {
+  if (array[i] > max) {
+    sMax = max;
+    max = array[i];
+  }
+  else if (array[i] > sMax && max != array[i]) {
+    sMax = array[i];
+  }
+}
+
+console.log(sMax);
+
+
+-------------------------------------------------------------------------
+Question :Reverse the array with Extra space :
+
+const array = [1, 2, 3, 4];
+
+const newArray = new Array();
+let j = 0;
+for (let i = array.length - 1; i >= 0; i--) {
+  newArray[j] = array[i];
+  j++;
+}
+console.log(newArray);
+
+-------------------------------------------------------------------------
+const array=[1,2,3,45,6]
+let j=0 ,i=array.length-1;
+while(i!==j){
+  let temp=array[i]
+  array[i]=array[j]
+  array[j]=temp;
+  i--;
+  j++
+}
+console.log(array);
+-------------------------------------------------------------------------
+Reverse The array without Extra space !
+
+let array = [1, 2, 3, 4, 5];
+let i = 0,
+  j = array.length - 1;
+while (i < j) {
+  [array[i], array[j]] = [array[j], array[i]];
+  i++;
+  j--;
+} 
+console.log(array);
+0
+-------------------------------------------------------------------------
+
+Question: We have taken the two varibles i ,j from starting of Array
+Question is that if during itration if value Equal to Zero it must  to move to swap with (j)
+if it is 1 it must to move forward to swap 
+
+Solution:
+
+const array = [1, 1, , 1, 0, 0, 1, 0, 0];
+let i = 0,
+  j = 0;
+while (i < array.length) {
+  if (array[i] === 0) {
+    let temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+    j++;
+  }
+  i++;
+}
+console.log(array);
+
+
+--------------------------------------------------------------------------------
+Question : To Find the Secound Maximum Number !
+
+function secondMaximum(arr) {
+  if (arr.length === 0 || !Array.isArray(arr)) {
+    console.log('Please Pass The Valid Array To The Funtion')
+    return
+  } else {
+    let max = -Infinity
+    let sMax = -Infinity
+
+    for (const num of arr) {
+      if (num > max) {
+        sMax = max
+        max = num
+      } else if (num > sMax && num < max) {
+        sMax = num
+      }
+    }
+    console.log(`The Second Maximum Number is ${sMax}`)
+    console.log(`The  Maximum Number is ${max}`)
+  }
+}
+
+secondMaximum('string')
+
+------------------------------------------------------------------------------------------
+
+Question: We have taken the two varibles i ,j from starting of Array
+Question is that if during itration if value Equal to Zero it must  to move to swap with (j)
+if it is 1 it must to move forward to swap 
+
+Secound Methods ?
+
+function ArraySwap() {
+  let arr = [1, 1, 0, 0, 1, 10, 0, 0]
+  if (!arr || arr.length === 0 || !Array.isArray(arr)) {
+    console.log('Please Provide The Array Structure')
+    return
+  }
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] < 0 || arr[i] > 1) {
+      console.log('Your Stored Invlide value Please It Must Be  1 and 0')
+      return
+    }
+  }
+
+  let i = 0,
+    j = 0
+  while (i < arr.length) {
+    if (arr[i] === 0) {
+      let temp = arr[i]
+      arr[i] = arr[j]
+      arr[j] = temp
+      j++
+    }
+    i++
+  }
+
+  console.log(arr)
+}
+
+ArraySwap()
+export { ArraySwap }    //it is name export is possible to do it  for using in another files
+
+
+
+const myArray = [1, 2, 3, 4, 5] // Array literal
+const anotherArray = new Array('apple', 'banana', 'cherry') // Using constructor
+const mixedArray = [1, 'two', true, null, undefined] // Mixed types
+console.log('My Array:', myArray)
+console.log('Another Array:', anotherArray)
+
+console.log('Mixed Array:', mixedArray)
+// Accessing elements
+console.log('First element of myArray:', myArray[0])
+console.log('Second element of anotherArray:', anotherArray[1])
+// Modifying elements
+myArray[2] = 10
+console.log('Modified myArray:', myArray)
+// Array methods
+myArray.push(6)
+console.log('After push:', myArray)
+
+const poppedElement = myArray.pop()
+console.log('Popped element:', poppedElement)
+console.log('After pop:', myArray)
+
+anotherArray.unshift('orange')
+console.log('After unshift:', anotherArray)
+const shiftedElement = anotherArray.shift()
+console.log('Shifted element:', shiftedElement)
+console.log('After shift:', anotherArray)
+
+const index = anotherArray.indexOf('banana')
+console.log("Index of 'banana':", index)
+const slicedArray = myArray.slice(1, 4)
+console.log('Sliced myArray (1 to 4):', slicedArray)
+const splicedArray = anotherArray.splice(1, 1, 'grape')
+console.log(
+  "Spliced anotherArray (removed 1 at index 1, added 'grape'):",
+  anotherArray
+)
+console.log('Removed elements:', splicedArray)
+const concatenatedArray = myArray.concat(anotherArray)
+console.log('Concatenated Array:', concatenatedArray)
+const joinedString = anotherArray.join(', ')
+console.log('Joined anotherArray:', joinedString)
+const reversedArray = myArray.reverse()
+console.log('Reversed myArray:', reversedArray)
+const sortedArray = anotherArray.sort()
+console.log('Sorted anotherArray:', sortedArray)
+const lengthOfMyArray = myArray.length
+console.log('Length of myArray:', lengthOfMyArray)
+
+// Advanced operations
+const mappedArray = myArray.map((num) => num * 2)
+console.log('Mapped myArray (each element * 2):', mappedArray)
+const filteredArray = myArray.filter((num) => num > 2)
+console.log('Filtered myArray (elements > 2):', filteredArray)
+const reducedValue = myArray.reduce((acc, curr) => acc + curr, 0)
+console.log('Reduced myArray (sum of elements):', reducedValue)
+// Multi-dimensional array
+const multiDimensionalArray = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+]
+console.log('Multi-dimensional Array:', multiDimensionalArray)
+console.log('Element at [1][2]:', multiDimensionalArray[1][2])
+// Iterating over arrays
+console.log('Iterating over myArray:')
+myArray.forEach((element, index) => {
+  console.log(`Index ${index}: ${element}`)
+})
+for (const element of anotherArray) {
+  console.log('Element from anotherArray:', element)
+}
+for (let i = 0; i < mixedArray.length; i++) {
+  console.log(`Element at index ${i} in mixedArray:`, mixedArray[i])
+}
+// Summary of array operations
+console.log('Final myArray:', myArray)
+
+console.log('Final anotherArray:', anotherArray)
+console.log('Final mixedArray:', mixedArray)
+// Advanced Array Operations in JavaScript
+// This code demonstrates various advanced operations that can be performed on arrays in JavaScript.
+console.log('Mapped myArray:', mappedArray)
+console.log('Filtered myArray:', filteredArray)
+console.log('Reduced value of myArray:', reducedValue)
+console.log('Multi-dimensional Array:', multiDimensionalArray)
+console.log('Iterated myArray using forEach, for...of, and traditional for loop.')
+// This code demonstrates various advanced operations that can be performed on arrays in JavaScript.
+console.log('Advanced Array Operations in JavaScript')
+console.log('This code demonstrates various advanced operations that can be performed on arrays in JavaScript.')
+console.log('Advanced Array Operations in JavaScript')
+console.log('This code demonstrates various advanced operations that can be performed on arrays in JavaScript.')    
+console.log('Advanced Array Operations in JavaScript')
+console.log('This code demonstrates various advanced operations that can be performed on arrays in JavaScript.')
+console.log('Advanced Array Operations in JavaScript')

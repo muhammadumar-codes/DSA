@@ -1,0 +1,217 @@
+==========================Varibles=======================
+
+
+
+
+var num=34;
+var num =34343;  
+num=100000;               //Here we can  re assign and redeclare the 
+
+
+let first=1000;
+let first=1000;                 //it gives you erro because we  cannot  reassign and redelacrea the varibel  again hree it 
+first=10000;    //it is posssible  to reassign the value;
+
+
+const pi=10000;
+pi=1090;
+const pi=1000000000;            ///both reassign adn redclear isnot possible here.
+
+
+Hoisting :
+
+:=> Hostiing is poissible in var but not initializtion of value 
+
+But in let and const is not posssible to host any initialized and decleartion
+
+
+Scope:
+
+Scoping of value of var is full scope it can be accessed from any where But the scope of 
+but let and const cannot be accessed from any where not it cannot be accessed.
+
+
+
+function test() {
+  if (true) {
+    var x = 10;
+    let y = 20;
+    const z = 30;
+  }
+  console.log(x); // ✅ 10
+  console.log(y); // ❌ ReferenceError
+  console.log(z); // ❌ ReferenceError
+}
+test();
+
+
+
+
+| Feature        | `var`                          | `let`         | `const`       |
+| -------------- | ------------------------------ | ------------- | ------------- |
+| Scope          | Function-scoped                | Block-scoped  | Block-scoped  |
+| Re-declaration | Allowed                        | ❌ Not allowed | ❌ Not allowed |
+| Re-assignment  | ✅ Allowed                      | ✅ Allowed     | ❌ Not allowed |
+| Hoisting       | ✅ (initialized as `undefined`) | ✅ (TDZ)       | ✅ (TDZ)       |
+| Default        | Old JS (ES5)                   | Modern (ES6)  | Modern (ES6)  |
+
+
+
+
+========================What is Primative and  Non Primative=======================
+Primative                                    Non -Primative 
+string                                        function 
+number                                        obj
+undefined                                      array
+null
+boolean
+symbol 
+bigInt
+
+
+console.log(typeof 42);          // 'number'
+console.log(typeof 'Janiii');    // 'string'
+console.log(typeof true);        // 'boolean'
+console.log(typeof null);        // ⚠️ 'object' (a JS bug)
+console.log(typeof undefined);   // 'undefined'
+console.log(typeof Symbol('id'));// 'symbol'
+console.log(typeof 123n);        // 'bigint'
+
+
+
+========================Non Primative=======================
+
+const user = { name: "Jani", age: 20 }; // object
+const arr = [1, 2, 3];                  // array (object)
+function greet() { return "Hello!"; }   // function (object)
+
+console.log(typeof user); // 'object'
+console.log(typeof arr);  // 'object'
+console.log(typeof greet);// 'function'
+
+
+
+| Type        | Meaning                               | Example                               |
+| ----------- | ------------------------------------- | ------------------------------------- |
+| `undefined` | Variable declared but not assigned    | `let x; console.log(x); // undefined` |
+| `null`      | Explicitly set “no value”             | `let y = null;`                       |
+| `NaN`       | Not a number (result of invalid math) | `Number("abc"); // NaN`               |
+
+NaN cannot campare even it give  You false when it You compare it with it own self 
+
+
+console.log(NaN === NaN);        // false ❗️
+console.log(Number.isNaN(NaN));  // true ✅
+
+
+========================Type Casting  .=======================
+
+console.log('5' + 5);   // '55'  (string + number → string)
+console.log('5' - 2);   // 3     (string → number)
+console.log('5' * 2);   // 10
+console.log(true + 1);  // 2     (true → 1)
+console.log(false + 1); // 1     (false → 0)
+
+console.log("2"+"3" +3)///it convert to string
+console.log(3+3+"3")    firt it  become  6 and convert to string  become 63
+console.log(3+2+2+"2"+"3" +3) first  it convert to number then  to string 7233
+
+
+========================Explicit Typecasting=======================
+
+
+const number = parseint(prompt("Enter Your Number"))
+const number = Number(prompt("Enter Your Number"))
+const number = +(prompt("Enter Your Number"))
+Number("123");   // 123
+String(123);     // "123"
+Boolean(0);      // false
+Boolean("hi");   // true
+
+
+========================Falsy  And Truthy Value =======================
+
+
+| Falsy Values        | Everything Else → Truthy |
+| ------------------- | ------------------------ |
+| `false`             | ✅ "Jani"                 |
+| `0`                 | ✅ 42                     |
+| `""` (empty string) | ✅ " "                    |
+| `null`              | ✅ []                     |
+| `undefined`         | ✅ {}                     |
+| `NaN`               | ✅ function(){}           |
+
+
+
+if (0) console.log('will not run');
+if ('Janiii') console.log('✅ runs');
+if ([]) console.log('✅ also runs');
+if (null) console.log('❌ will not run');
+
+
+
+Interview  Level Questions :
+
+
+| Question                                                      | Answer                                                                                                    |
+| ------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| **1. What is hoisting?**                                      | Moving variable and function declarations to the top of their scope before execution.                     |
+| **2. Difference between `var`, `let`, and `const`?**          | `var`: function-scoped, hoisted with `undefined`. `let` and `const`: block-scoped, TDZ, not redeclarable. |
+| **3. What is the difference between `undefined` and `null`?** | `undefined` → declared but not assigned. `null` → intentionally no value.                                 |
+| **4. Is `typeof null` a bug?**                                | Yes, it returns `'object'` due to a 1995 JS design mistake.                                               |
+| **5. Why `NaN !== NaN`?**                                     | Because `NaN` is not equal to anything, even itself. Use `Number.isNaN()` to check.                       |
+| **6. What are truthy/falsy values?**                          | Values that evaluate to true/false in a boolean context (like inside `if`).                               |
+| **7. What is TDZ (Temporal Dead Zone)?**                      | Period between block start and variable declaration where accessing `let/const` causes ReferenceError.    |
+
+
+
+========================Math=======================
+let   value =(5+2)*2+13/2         it gives the 20.5 because it follows the rule of  BODMAS
+console.log(value);
+
+
+ var resultOfComputation = ((2 * 4) * 4)+2
+ console.log(resultOfComputation);
+ 
+var  resultOfComputation = (2 * 4)* (4 + 2)
+console.log(resultOfComputation);
+
+
+ var message = "Thanks, ";
+ var userName = "Susan";
+ var banger = "!";
+ var customMess=
+message + userName + banger;
+ alert(customMess);
+
+
+
+'5' + 3        // "53"
+'5' - 3        // 2
+true + false   // 1
+
+
+([] + [])          // "" (empty string)
+([] + {})          // "[object Object]"  // [] -> "" ; {} -> "[object Object]"
+({} + [])          // depends on parsing context — ambiguous IF at start of line
+                     // Use parentheses to force expression: ({} + []) -> "[object Object]"
+
+
+
+null == undefined   // true
+null == 0           // false
+'' == 0             // true
+NaN === NaN         // false
+Number.isNaN(NaN)   // true
+Object.is(NaN, NaN) // true
+Object.is(-0, +0)   // false
+-0 === 0            // true
+
+console.log(1 + "2" + 3);
+console.log(1 + 2 + "3");
+   
+
+
+
+
+
