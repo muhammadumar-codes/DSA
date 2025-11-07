@@ -330,3 +330,21 @@ console.log('This code demonstrates various advanced operations that can be perf
 console.log('Advanced Array Operations in JavaScript')
 console.log('This code demonstrates various advanced operations that can be performed on arrays in JavaScript.')
 console.log('Advanced Array Operations in JavaScript')
+
+
+
+//How ot itrate on the array nested Arary
+
+const multiDimensionalArray = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+]
+
+for (const element of multiDimensionalArray) {
+  if (Array.isArray(element)) {
+    for (const nestArray of element) {
+      console.log(nestArray)
+    }
+  }
+}

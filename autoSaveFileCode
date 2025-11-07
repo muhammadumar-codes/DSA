@@ -1,0 +1,19 @@
+{
+  "editor.mouseWheelZoom": true,
+  "workbench.settings.applyToAllProfiles": [
+    "workbench.settings.useSplitJSON"
+  ],
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "files.autoSave": "onWindowChange",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "prettier.singleQuote": true,
+  "prettier.semi": false,
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+  },
+  "terminal.integrated.focusAfterRun": "terminal"
+}
