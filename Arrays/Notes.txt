@@ -181,7 +181,7 @@ function secondMaximum(arr) {
 
     for (const num of arr) {
       if (num > max) {
-        sMax = max
+        sMax = maxx
         max = num
       } else if (num > sMax && num < max) {
         sMax = num

@@ -15,7 +15,7 @@ OutPut:
 
 -----------------------------------------------------------------
 
-Question: [6,1,2,3,4,5]
+Question: [6,1,2,3,4,5] ?
 
 //source code .
 
@@ -44,7 +44,7 @@ lastToFirst([1, 2, 3, 4, 5, 6])
 
 
 // problem to solve it:
-[3, 4, 5, 1, 2]
+[3, 4, 5, 1, 2] ?
 
 let array = [1, 2, 3, 4, 5]
 let copy = array[0]
@@ -58,6 +58,10 @@ for (let i = 0; i < array.length; i++) {
 array[array.length - 1] = copy
 array[array.length - 1] = copyTwo
 console.log(array)
+
+
+-----------------------------------------------------------------
+Question :How to rotate the value By User Input Given ?
 
 
 
