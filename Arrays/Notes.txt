@@ -234,6 +234,52 @@ function ArraySwap() {
 ArraySwap()
 export { ArraySwap }    //it is name export is possible to do it  for using in another files
 
+------------------------------------------------------------------------------------------
+
+// it is what to find the Reverse of Array with H Cases
+
+function ReverseArray(para) {
+  //   for (const element of para) {
+  //     if (typeof element === 'string') {
+  //       console.log('The Array must be in Number !')
+  //       return
+  //     }
+  //   }
+
+  for (let index = 0; index < para.length; index++) {
+    const element = para[index]
+    if (typeof element === 'string') {
+      console.log('Please Provide The valid  Array (Must be in Number )')
+      return
+    }
+  }
+
+  if (!Array.isArray(para)) {
+    console.log('Please Provide Array !')
+    return
+  } else if (para.length - 1 < 2) {
+    console.log('Please The length  Of Array Must be Greater than 2')
+    return
+  }
+
+  let arr = para
+  let i = 0,
+    j = arr.length - 1
+
+  while (i < j) {
+    ;[arr[i], arr[j]] = [arr[j], arr[i]]
+    i++
+    j--
+  }
+  console.log('The Reverse  of array is', arr)
+}
+
+ReverseArray(['s', 't', 'u'])
+
+
+
+------------------------------------------------------------------------------------------
+
 
 
 const myArray = [1, 2, 3, 4, 5] // Array literal
