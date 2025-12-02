@@ -145,3 +145,56 @@
 // // Your notes are 90% correct, and now they are 100% perfect after corrections ❤️🔥
 
 // ---------------------------------------------------------------------------------------------
+
+// thi is called the event bubbling from childl to parent
+
+// document.querySelector('#parent').addEventListener('click', () => {
+//   console.log('This  is Parent')
+// })
+
+// document.querySelector('#child').addEventListener('click', (e) => {
+
+//   console.log('This  is Child')
+// })
+
+// ---------------------------------------------------------------------------------------------
+
+// This is called teh event caputring from parent to child
+
+// document.querySelector('#parent').addEventListener('click', () => {
+//   console.log('This  is Parent')
+// },true)
+
+// document.querySelector('#child').addEventListener('click', (e) => {
+
+//   console.log('This  is Child')
+// })
+
+// ---------------------------------------------------------------------------------------------
+
+// if We want to stop the propagation :
+
+// capturing of event
+
+// document.getElementById('parent').addEventListener(
+//   'click',
+//   (e) => {
+//     e.stopPropagation()
+//     console.log('Parent Div Clicked (Bubbling)')
+//   },
+//   true
+// )
+
+// document.getElementById('child').addEventListener('click', () => {
+//   console.log('Button Clicked')
+// })
+
+// ---------------------------------------------------------------------------------------------
+
+//  event Delagation
+
+// document.getElementById('list').addEventListener('click', function (e) {
+//   if (e.target.tagName === 'LI') {
+//     console.log('You Clicked On The', e.target.textContent)
+//   }
+// })
