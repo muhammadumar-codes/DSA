@@ -42,26 +42,50 @@ lastToFirst([1, 2, 3, 4, 5, 6])
 
 -----------------------------------------------------------------
 
+Rotating Array By k Time
 
-// problem to solve it:
-[3, 4, 5, 1, 2] ?
 
-let array = [1, 2, 3, 4, 5]
-let copy = array[0]
-let copyTwo = array[0]
-for (let i = 0; i < array.length; i++) {
-  for (let j = 0; i < array.length; j++) {
-    array[i] = array[i + 1]
+function leftRotation() {
+  const arr = [1, 2, 3, 4, 5]
+  let k = Number(prompt('Enter  Your value of K'))
+
+  if (!k || k < 0) {
+    console.log('Please Enter Your value of K')
+    return
   }
-  array[j] = array[j + 1]
+
+  for (let index = 0; index < k; index++) {
+    let copy = arr[0]
+
+    for (let index = 0; index < arr.length - 1; index++) {
+      arr[index] = arr[index + 1]
+    }
+    arr[arr.length - 1] = copy
+  }
+
+  console.log(arr)
 }
-array[array.length - 1] = copy
-array[array.length - 1] = copyTwo
-console.log(array)
+leftRotation()
 
 
 -----------------------------------------------------------------
-Question :How to rotate the value By User Input Given ?
+
+Second method to solve the problem of rotating  array using Extra space
 
 
+// [1, 2, 3, 4, 5]
+const arr = [1, 2, 3, 4, 5]
+let temp = new Array(arr.length)
 
+let k = Number(prompt('Enter Your value Of K'))
+k = k % arr.length
+
+for (let i = 0; i < arr.length; i++) {
+  temp[i] = arr[(i + k) % arr.length]
+//   process of it is : first the index come like 1+for exmamle k value is =2 1+2=3 remender is 2 keep teh index value ion new array
+
+}
+
+console.log(temp)
+
+------------------------------------------------------------------------------
