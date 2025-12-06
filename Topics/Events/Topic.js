@@ -198,3 +198,10 @@
 //     console.log('You Clicked On The', e.target.textContent)
 //   }
 // })
+
+const container = document.querySelector('.list')
+container.addEventListener('click', function (e) {
+  if (e.target.tagName === 'LI') {
+    console.log('You clickced the', e.target.textContent)
+  }
+})
