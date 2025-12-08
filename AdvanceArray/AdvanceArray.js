@@ -1,11 +1,11 @@
-// // This is the array to remove the duplicate value from it
+// // This is the hight to remove the duplicate value from it
 
 // function RemoveDuplicate() {
-//   const array = [1, 1, 2, 2, 3, 3]
+//   const hight = [1, 1, 2, 2, 3, 3]
 //   let j = 1
-//   for (let index = 0; index < array.length - 1; index++) {
-//     if (array[index] !== array[index + 1]) {
-//       array[index] = array[index + 1]
+//   for (let index = 0; index < hight.length - 1; index++) {
+//     if (hight[index] !== hight[index + 1]) {
+//       hight[index] = hight[index + 1]
 //       j++
 //     }
 //   }
@@ -16,24 +16,24 @@
 
 // // This is code is a about to merge the code
 
-// const array1 = [1, 2, 3]
-// const array2 = [4, 5, 6]
+// const hight1 = [1, 2, 3]
+// const hight2 = [4, 5, 6]
 // let i = (j = k = 0)
-// let merge = new Array(array1.length + array2.length)
-// while (i < array1.length && j < array2.length) {
-//   if (array1[i] < array2[j]) {
-//     merge[k++] = array1[i++]
+// let merge = new hight(hight1.length + hight2.length)
+// while (i < hight1.length && j < hight2.length) {
+//   if (hight1[i] < hight2[j]) {
+//     merge[k++] = hight1[i++]
 //   } else {
-//     merge[k++] = array2[j++]
+//     merge[k++] = hight2[j++]
 //   }
 // }
 
-// while (i < array1.length) {
-//   merge[k++] = array1[i++]
+// while (i < hight1.length) {
+//   merge[k++] = hight1[i++]
 // }
 
-// while (j < array2.length) {
-//   merge[k++] = array2[j++]
+// while (j < hight2.length) {
+//   merge[k++] = hight2[j++]
 // }
 
 // console.log(merge)
@@ -78,22 +78,22 @@
 
 // FIRST  OF ALLL WE WANT TO SHIFT ALL TEH, ZERO ELEMENT TO TEH LEFT SIDE
 
-// const array = [1, 1, 1, 0, 0, 0, 0, 1]
+// const hight = [1, 1, 1, 0, 0, 0, 0, 1]
 
 // let j = 0,
 //   i = 0
 
-// while (i < array.length) {
-//   if (array[i] === 0) {
-//     let temp = array[i]
-//     array[i] = array[j]
-//     array[j] = temp
+// while (i < hight.length) {
+//   if (hight[i] === 0) {
+//     let temp = hight[i]
+//     hight[i] = hight[j]
+//     hight[j] = temp
 //     j++
 //   }
 //   i++
 // }
 
-// console.log(array)
+// console.log(hight)
 
 // Two Pointer swaping questions
 
