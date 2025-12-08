@@ -58,20 +58,43 @@
 
 // here we want to checkk the madimujm profit  int this code to know it
 
-function maxProfit() {
-  const arr = [1, 2, 3, 4]
-  let min = arr[0]
-  let maxValue = 0
+// function maxProfit() {
+//   const arr = [1, 2, 3, 4]
+//   let min = arr[0]
+//   let maxValue = 0
 
-  // Loop on the arr to solve it
+//   // Loop on the arr to solve it
 
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] < min) min = arr[i]
-    let profit = arr[i] - min
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] < min) min = arr[i]
+//     let profit = arr[i] - min
 
-    maxValue = Math.max(maxValue, profit)
-  }
+//     maxValue = Math.max(maxValue, profit)
+//   }
 
-  return maxValue
-}
-console.log(maxProfit())
+//   return maxValue
+// }
+// console.log(maxProfit())
+
+// FIRST  OF ALLL WE WANT TO SHIFT ALL TEH, ZERO ELEMENT TO TEH LEFT SIDE
+
+// const array = [1, 1, 1, 0, 0, 0, 0, 1]
+
+// let j = 0,
+//   i = 0
+
+// while (i < array.length) {
+//   if (array[i] === 0) {
+//     let temp = array[i]
+//     array[i] = array[j]
+//     array[j] = temp
+//     j++
+//   }
+//   i++
+// }
+
+// console.log(array)
+
+// Two Pointer swaping questions
+
+// // =>
