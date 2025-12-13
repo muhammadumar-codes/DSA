@@ -1,9 +1,7 @@
-// This code is the insert algrithem which is ujsed to insert  elements
-
 function insertSort() {
   const array = [5, 3, 4, 1, 2]
 
-  for (let i = 0; i < array.length; i++) {
+  for (let i = 1; i < array.length; i++) {
     let key = array[i]
     let j = i - 1
 
@@ -18,5 +16,4 @@ function insertSort() {
   return array
 }
 
-// callig of it
 console.log(insertSort())
