@@ -1,0 +1,93 @@
+Definination:
+
+A  Recursion  it is a funtion that calll it  self again adn again until it reaches to the base case
+
+
+
+
+
+
+
+
+
+1st Example : 
+
+
+function fact(n) {
+  if (n === 1) return 1;   // stop
+  return n * fact(n - 1); // same problem
+}
+
+
+2nd Example :
+
+simple  Example For plate washing:
+
+
+
+function WashPlates(plates) {
+  if (plates === 0) {
+    console.log('All the Plate are Washed !')
+    return
+  }
+
+  console.log('Washing The plates')
+
+  WashPlates(plates - 1)
+}
+
+WashPlates(4)
+
+
+Example 3rd:
+
+
+function findName(names, index) {
+  if (index === names.length) {
+    console.log("Name not found");
+    return;
+  }
+
+  if (names[index] === "Ali") {
+    console.log("Found Ali!");
+    return;
+  }
+
+  findName(names, index + 1);
+}
+
+findName(["Ahmed", "Usman", "Ali", "Bilal"], 0);
+
+
+-----------------------------------------------------------------
+
+
+
+
+//Best Example For Using Recursion 
+
+
+function Factorial(n) {
+  if (n === 1 || n === 0) return 1; // Base case for it :
+
+  return n * Factorial(n - 1);
+}
+
+console.log(Factorial(5));
+
+
+---------------------------------------
+// Factorial of numbers
+function fibonacci(n) {
+  let first = 0,
+    second = 1;
+  process.stdout.write(first + " " + second + " ");
+  for (let i = 0; i < n; i++) {
+    let third = first + second;
+    first = second;
+    second = third;
+    process.stdout.write(third + " ");
+  }
+}
+fibonacci(5);
+
