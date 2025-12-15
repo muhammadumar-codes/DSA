@@ -91,3 +91,29 @@ function fibonacci(n) {
 }
 fibonacci(5);
 
+
+---------------------------------------------------
+
+function fibonacci(n) {
+  if (n === 0) return 0;
+  if (n === 1) return 1;
+
+  return fibonacci(n - 1) + fibonacci(n - 1);
+}
+console.log(fibonacci(6));
+
+-------------------------------------------
+
+The Example is using The Recursion :
+
+function fibonacci(n, first, second) {
+  if (n === 0) return; //it  is called the base case for the recurion to solve it
+
+  let third = first + second;
+
+  process.stdout.write(third + " ");
+
+  fibonacci(n - 1, second, third);
+}
+
+fibonacci(4, 0, 1);
