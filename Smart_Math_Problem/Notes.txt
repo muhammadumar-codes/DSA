@@ -1,0 +1,55 @@
+// FIND THE GCD USING EUCLIDEAN
+
+// These are two points
+
+let a = 32;
+let b = 20;
+
+// loop on the values
+
+while (a != b) {
+  if (a > b) a = a - b;
+  else b = b - a;
+}
+console.log(`The Factor of A  is  *${a}* And B  is  *${b}*`);
+
+
+-------------------------------------------------------------------------------------------
+
+USING RECURSION METHOD FOR GCD:
+
+function GCD(a, b) {
+  // it is a  base case for  you to do it
+
+  if (a === b) return a;
+
+  if (a > b) return GCD(a - b, b);
+  else return GCD(b - a, a);
+}
+console.log(GCD(32, 20));
+
+
+-------------------------------------------------------------------------------------------
+
+ 
+Algorithm Name: Euclidean Algorithm
+
+Uses modulo %
+
+Faster than subtraction method
+
+Mostly used in interviews
+
+
+
+function GCD(a, b) {
+  if (b === 0) return a;
+  return GCD(b, a % b);
+}
+
+console.log(GCD(32, 20));
+
+
+-------------------------------------------------------------------------------------------
+
+
