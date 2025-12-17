@@ -53,3 +53,45 @@ console.log(GCD(32, 20));
 -------------------------------------------------------------------------------------------
 
 
+
+function factors(n) {
+  
+  // loops on give parameters
+
+  for (let i = 1; i * i <= n; i++) {
+    if (n % i === 0) console.log(i);
+
+    if (i !== n / i) {
+      console.log("Unknown", Math.floor(n / i));
+    }
+  }
+}
+factors(100);
+
+-------------------------------------------------------------------------------------------
+
+QUESTION : 
+HOW TO FIND THE  PRIME NUMBERS ?
+
+// now to  Make the function  for the Prime and non prime numbers
+
+function primeNumber(n) {
+  // This is The H -CASE
+
+  if (!n) return false;
+  // less tha and equal is  to 1 is not  the prime number
+  if (n <= 1) return false;
+
+  for (let i = 2; i * i <= n; i++) {
+    // showing that if remainderis  equal to the zero
+    if (i % 2 === 0) return false;
+  }
+
+  return true;
+}
+console.log(primeNumber(100));
+
+
+
+-------------------------------------------------------------------------------------------
+

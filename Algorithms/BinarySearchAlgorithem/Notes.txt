@@ -1,0 +1,46 @@
+Binary search = divide by 2
+
+Works only on sorted data
+
+Time = O(log n)
+
+Used in arrays, searching, problems
+
+==> interview Answer:
+Binary search reduces search space by half in every step.
+
+
+
+
+
+// Full code 
+
+function binarySearch(arr, target) {
+  if (arr.length <= 1 && target > arr.length) {
+    let left = 0;
+    let right = arr.length - 1;
+
+    while (left <= right) {
+      // it is to find the mid point  of the problem
+      let mid = Math.floor((left + right) / 2);
+
+      // if in array the mid si found return the mid
+      if (arr[mid] === target) {
+        return mid;
+      } else if (arr[mid] < target) {
+        left = mid + 1;
+      } else {
+        right = mid - 1;
+      }
+    }
+
+    return -1;
+  }
+  // here declare teh varible start and end pointer
+}
+
+const choiceNumber = prompt("Enter Your Number");
+if (!choiceNumber) console.log("Please Valid Number");
+
+const result = binarySearch([2, 4, 6, 8, 10, 12, 14], choiceNumber);
+console.log(result);
