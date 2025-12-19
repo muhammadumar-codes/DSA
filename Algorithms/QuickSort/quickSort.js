@@ -1,0 +1,16 @@
+function partition(arr, low, high) {
+  let pivot = arr[high]; // last element pivot
+  let i = low - 1; // boundary
+
+  for (let j = low; j < high; j++) {
+    if (arr[j] < pivot) {
+      i++;
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+  }
+
+  // pivot ko sahi jagah par lana
+  [arr[i + 1], arr[high]] = [arr[high], arr[i + 1]];
+
+  return i + 1; // pivot index
+}
