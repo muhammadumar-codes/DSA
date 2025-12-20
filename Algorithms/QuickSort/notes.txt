@@ -22,6 +22,8 @@ function partition(arr, low, high) {
 //This is anther methods to solve the problem
 
 
+// Examples used Recursion
+
 
 function quickSort(arr) {
   // Base case: arrays with 0 or 1 element are already sorted
