@@ -1,17 +1,22 @@
-// function cyclicSort(arr) {
-//   let i = 0;
-//   while (i < arr.length) {
-//     let correctIndex = arr[i] - 1;
-//     if (arr[i] !== arr[correctIndex]) {
-//       [arr[i], arr[correctIndex]] = [arr[correctIndex], arr[i]];
-//     } else {
-//       i++;
-//     }
-//   }
+//Example in cyclic sort :
 
-//   return arr;
-// }
+function cyclicSort(arr) {
+  let i = 0;
 
-// let array = [3, 5, 2, 1, 4];
-// console.log(cyclicSort(array));
+  while (i < arr.length) {
+    let correctIndex = arr[i] - 1;
+
+    if (arr[i] !== arr[correctIndex]) {
+      // swap
+      [arr[i], arr[correctIndex]] = [arr[correctIndex], arr[i]];
+    } else {
+      i++;
+    }
+  }
+
+  return arr;
+}
+
+let array = [3, 5, 2, 1, 4];
+console.log(cyclicSort(array));
 
