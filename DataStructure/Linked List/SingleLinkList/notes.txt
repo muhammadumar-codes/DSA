@@ -1,0 +1,176 @@
+// ================================
+// Node Class (Har dabba / node)
+// ================================
+class Node {
+  constructor(data) {
+    this.data = data;   // value
+    this.next = null;   // next node ka address
+  }
+}
+
+// ==================================
+// LinkedList Class (Poori chain)
+// ==================================
+class LinkedList {
+  constructor() {
+    this.head = null;   // pehla node
+  }
+
+  // ----------------------------
+  // Insert at Head (Start)
+  // ----------------------------
+  insertAtHead(data) {
+    let newNode = new Node(data);
+    newNode.next = this.head;
+    this.head = newNode;
+  }
+
+  // ----------------------------
+  // Insert at Tail (End)
+  // ----------------------------
+  insertAtTail(data) {
+    let newNode = new Node(data);
+
+    if (this.head === null) {
+      this.head = newNode;
+      return;
+    }
+
+    let temp = this.head;
+    while (temp.next !== null) {
+      temp = temp.next;
+    }
+    temp.next = newNode;
+  }
+
+  // ----------------------------
+  // Insert at Position (Index)
+  // ----------------------------
+  insertAtPosition(data, pos) {
+    if (pos === 0) {
+      this.insertAtHead(data);
+      return;
+    }
+
+    let newNode = new Node(data);
+    let temp = this.head;
+
+    for (let i = 0; i < pos - 1 && temp !== null; i++) {
+      temp = temp.next;
+    }
+
+    if (temp === null) {
+      console.log("Position invalid");
+      return;
+    }
+
+    newNode.next = temp.next;
+    temp.next = newNode;
+  }
+
+  // ----------------------------
+  // Delete Head
+  // ----------------------------
+  deleteHead() {
+    if (this.head === null) return;
+    this.head = this.head.next;
+  }
+
+  // ----------------------------
+  // Delete Tail
+  // ----------------------------
+  deleteTail() {
+    if (this.head === null || this.head.next === null) {
+      this.head = null;
+      return;
+    }
+
+    let temp = this.head;
+    while (temp.next.next !== null) {
+      temp = temp.next;
+    }
+    temp.next = null;
+  }
+
+  // ----------------------------
+  // Delete by Value
+  // ----------------------------
+  deleteByValue(value) {
+    if (this.head === null) return;
+
+    if (this.head.data === value) {
+      this.head = this.head.next;
+      return;
+    }
+
+    let temp = this.head;
+    while (temp.next !== null && temp.next.data !== value) {
+      temp = temp.next;
+    }
+
+    if (temp.next !== null) {
+      temp.next = temp.next.next;
+    }
+  }
+
+  // ----------------------------
+  // Print Linked List
+  // ----------------------------
+  print() {
+    let temp = this.head;
+    let result = "";
+
+    while (temp !== null) {
+      result += temp.data + " → ";
+      temp = temp.next;
+    }
+    console.log(result + "null");
+  }
+
+  // ----------------------------
+  // Reverse Linked List
+  // ----------------------------
+  reverse() {
+    let prev = null;
+    let curr = this.head;
+
+    while (curr !== null) {
+      let next = curr.next;
+      curr.next = prev;
+      prev = curr;
+      curr = next;
+    }
+
+    this.head = prev;
+  }
+
+  // ----------------------------
+  // Find Middle Node
+  // ----------------------------
+  findMiddle() {
+    let slow = this.head;
+    let fast = this.head;
+
+    while (fast !== null && fast.next !== null) {
+      slow = slow.next;
+      fast = fast.next.next;
+    }
+    return slow ? slow.data : null;
+  }
+
+  // ----------------------------
+  // Detect Cycle (Loop)
+  // ----------------------------
+  hasCycle() {
+    let slow = this.head;
+    let fast = this.head;
+
+    while (fast && fast.next) {
+      slow = slow.next;
+      fast = fast.next.next;
+
+      if (slow === fast) return true;
+    }
+    return false;
+  }
+}
