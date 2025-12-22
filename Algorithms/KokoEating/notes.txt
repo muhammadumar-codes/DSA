@@ -16,4 +16,3 @@ function minEatingSpeed(piles, h) {
 
   return low;
 }
-
