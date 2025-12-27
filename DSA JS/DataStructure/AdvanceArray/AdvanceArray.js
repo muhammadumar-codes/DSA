@@ -98,3 +98,83 @@
 // Two Pointer swaping questions
 
 // // =>
+// This is The code To find The duplicate in the array
+
+// function RemoveDuplicate() {
+//   const arr = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7];
+
+//   let j = 1;
+
+//   for (let i = 0; i < arr.length - 1; i++) {
+//     if (arr[i] !== arr[i + 1]) {
+//       arr[j] = arr[i + 1];
+//       j++;
+//     }
+//   }
+//   return j;
+// }
+
+// console.log(RemoveDuplicate());
+
+// How to merge the Array
+
+// let i = (k = j = 0);
+
+// let merge = new Array(array1.length + array2.length);
+
+// while (i < array1.length && j < array2.length) {
+//   if (array1[i] < array2[j]) {
+//     merge[k++] = array1[i++];
+//   } else {
+//     merge[k++] = array2[j++];
+//   }
+
+//   while (i < array1.length) {
+//     merge[k++] = array1[i++];
+//   }
+
+//   while (j < array2.length) {
+//     merge[k++] = array2[j++];
+//   }
+// }
+
+// // log of  the merge array
+
+// console.log(merge);
+
+// How  to merge the array
+
+//How ot merge the Two arrayss
+
+const array1 = [1, 2, 3];
+const array2 = [4, 5, 6];
+
+// merge array  to merge
+
+let merge = new Array(array1.length + array2.length);
+
+let i = (j = k = 0);
+
+// looping  until the i length and j length
+
+while (i < array1.length && j < array2.length) {
+  if (array1[i] < array2[j]) {
+    merge[k++] = array1[i++];
+  } else {
+    merge[k++] = array2[j++];
+  }
+}
+
+// do this  untile  i length to do this
+
+while (i < array1[i]) {
+  merge[k++] = array1[i++];
+}
+
+while (j < array2[j]) {
+  merge[k++] = array2[j++];
+}
+
+// showing the merge array here to do it
+
+console.log(merge);

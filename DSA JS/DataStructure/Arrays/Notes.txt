@@ -153,19 +153,19 @@ if it is 1 it must to move forward to swap
 
 Solution:
 
-const array = [1, 1, , 1, 0, 0, 1, 0, 0];
-let i = 0,
-  j = 0;
-while (i < array.length) {
-  if (array[i] === 0) {
-    let temp = array[i];
-    array[i] = array[j];
-    array[j] = temp;
-    j++;
+  const array = [1, 1, , 1, 0, 0, 1, 0, 0];
+  let i = 0,
+    j = 0;
+  while (i < array.length) {
+    if (array[i] === 0) {
+      let temp = array[i];
+      array[i] = array[j];
+      array[j] = temp;
+      j++;
+    }
+    i++;
   }
-  i++;
-}
-console.log(array);
+  console.log(array);
 
 
 --------------------------------------------------------------------------------

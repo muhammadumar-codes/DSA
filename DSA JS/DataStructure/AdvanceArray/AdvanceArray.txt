@@ -90,7 +90,8 @@ console.log(temp)
 
 ------------------------------------------------------------------------------
 
-Question: Now to check that first of all we will check each elementin  a array if it has the duplicate will remmove the duplicate and it has Differnt we will increment by 1
+Question: Now to check that first of all we will check each elementin  a
+ array if it has the duplicate will remmove the duplicate and it has Differnt we will increment by 1
 it remove the duplicate from the array
 [1, 1, 2, 2, 3, 3]
 
@@ -104,8 +105,8 @@ function RemoveDuplicate() {
     if (arr[i] !== arr[i + 1]) {
       arr[j] = arr[i + 1]
       j++ 
-    }
   }
+    }
   return j
 }
 
@@ -113,7 +114,7 @@ console.log(RemoveDuplicate())
 
 ------------------------------------------------------------------------------
 
-Question: The Question is that how to merfger the Two Array in a one array using merge The follwing is the code of it:
+Question: The Question is that how to merge The  the Two Array in a one array using merge The follwing is the code of it:
 
 
 const arr1 = [4, 5, 6]
