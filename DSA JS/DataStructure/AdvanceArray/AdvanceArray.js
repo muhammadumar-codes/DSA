@@ -146,35 +146,110 @@
 
 //How ot merge the Two arrayss
 
-const array1 = [1, 2, 3];
-const array2 = [4, 5, 6];
+// const array1 = [1, 2, 3];
+// const array2 = [4, 5, 6];
 
-// merge array  to merge
+// // merge array  to merge
 
-let merge = new Array(array1.length + array2.length);
+// let merge = new Array(array1.length + array2.length);
 
-let i = (j = k = 0);
+// let i = (j = k = 0);
 
-// looping  until the i length and j length
+// // looping  until the i length and j length
 
-while (i < array1.length && j < array2.length) {
-  if (array1[i] < array2[j]) {
-    merge[k++] = array1[i++];
-  } else {
-    merge[k++] = array2[j++];
-  }
-}
+// while (i < array1.length && j < array2.length) {
+//   if (array1[i] < array2[j]) {
+//     merge[k++] = array1[i++];
+//   } else {
+//     merge[k++] = array2[j++];
+//   }
+// }
 
-// do this  untile  i length to do this
+// // do this  untile  i length to do this
 
-while (i < array1[i]) {
-  merge[k++] = array1[i++];
-}
+// while (i < array1[i]) {
+//   merge[k++] = array1[i++];
+// }
 
-while (j < array2[j]) {
-  merge[k++] = array2[j++];
-}
+// while (j < array2[j]) {
+//   merge[k++] = array2[j++];
+// }
 
-// showing the merge array here to do it
+// // showing the merge array here to do it
 
-console.log(merge);
+// console.log(merge);
+
+
+
+
+
+
+
+// finding the maximum Profit in
+
+
+
+// Incomplete the problems 
+
+
+// function maxProfit() {
+//   let prices = [7, 6, 4, 3, 1]
+//   let max = 0 // Maximum profit
+//   let min = prices[0] // Minimum price so far
+
+//   for (let i = 0; i < prices.length; i++) {
+//     if (prices[i] < min) min = prices[i] // Update minimum price
+
+//     let profit = prices[i] - min // Current profit
+
+//     max = Math.max(max, profit) // Update max profit if bigger
+//   }
+
+//   return max
+// }
+
+// console.log(maxProfit()) // You must ADD ()
+
+
+
+
+
+
+
+
+// in complete the problem yet to complete it 
+
+
+// const array = [1, 1, 0, 3,4,5,0, 2, 1, 0, 2]
+
+// let i = 0,
+//   j = 0,
+//   k = array.length - 1
+
+// while (i < k) {
+//   if (array[i] === 0) {
+//     ;[array[i], array[j]] = [array[j], array[i]]
+
+//     j++h
+//     i++
+//   } else if (array[i] === 2) {
+//     ;[array[i], array[k]] = [array[k], array[i]]
+
+//     k--
+//   } else {
+//     i++
+//   }
+// }
+
+// console.log(array)
+
+
+
+
+
+
+
+
+
+
+

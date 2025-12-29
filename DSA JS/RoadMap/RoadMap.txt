@@ -1,7 +1,7 @@
     ==== *  DSA ROADMAP IN  JAVASCRIPT  TO LEARN *====
     
 
-1. Arrays With Full  Advance  Array  && Algorithms && 2D Array With Detail
+1. Algorithms
 2. String 
 3. Recursion
 4. Pattern Programming  

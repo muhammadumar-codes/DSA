@@ -1,0 +1,161 @@
+   ===*Example TO Find The maximum and minimum *===
+
+   const array = [
+     [1, 2, 3],
+     [4, 5, 6],
+   ];
+
+   let maximum=array[0][0]
+
+      This is the row loop to checkk it
+
+   for (let i = 0; i <array.length; i++) {
+     for (let j=0;j<array[i].length;j++){
+
+       if (array[i][j]>maximum){
+         maximum=array[i][j]
+       }
+
+     }
+   }
+
+   console.log(maximum);
+
+   ----------------------------------------------------------------------------------------------
+
+   ===*Sum of all elements *===
+   const array = [
+     [1, 2, 3],
+     [4, 5, 6],
+   ]
+
+   let sum = 0
+   for (let i = 0; i < array.length; i++) {
+     for (let j = 0; j < array[i].length; j++) {
+       sum += array[i][j]
+     }
+   }
+
+   console.log(sum)
+
+   ----------------------------------------------------------------------------------------------
+   ===*Example TO find The linear Search *===
+
+   const array = [
+     [1, 2, 3],
+
+     [4, 5, 6],
+   ]
+
+      talking about the target
+   let target = Number(prompt('Enter Y our target !'))
+
+   for (let i = 0; i < array.length; i++) {
+     for (let j = 0; j < array[i].length; j++) {
+       if (array[i][j] === target) {
+         console.log(array[i][j])
+         found = true
+       }
+     }
+   }
+
+   ----------------------------------------------------------------------------------------------
+
+   ===*Example TO find How to take the transpose of matrix *===
+
+   const array = [
+     [1, 2, 3],
+     [4, 5, 6],
+   ]
+
+   let transpose = []
+
+   for (let i = 0; i < array.length; i++) {
+        rows
+     for (let j = 0; j < array[i].length; j++) {
+          columns
+
+       if (!transpose[j]) {
+         transpose[j] = []
+       }
+       transpose[j][i] = array[i][j]
+     }
+   }
+
+      console to the transpose
+
+   console.log(transpose)
+
+   ----------------------------------------------------------------------------------------------
+
+   ===*Example Rotate Matrix by 90 *===
+
+   Agorithem for it
+
+   First of all take  Transose of  And then reverse The elements
+ *
+const array = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+]
+
+   STEP 1: TRANSPOSE
+for (let i = 0; i < array.length; i++) {
+  for (let j = i; j < array[i].length; j++) {
+    let temp = array[i][j]
+    array[i][j] = array[j][i]
+    array[j][i] = temp
+  }
+}
+
+   STEP 2: REVERSE EACH ROW
+for (let i = 0; i < array.length; i++) {
+  array[i].reverse()
+}
+
+console.log(array)
+
+* 
+
+   ----------------------------------------------------------------------------------------------
+
+
+
+ ===*Set Matrix  Zeros*===
+
+const Matrix = [
+   [1, 1, 1],
+  [1, 0, 1],
+   [1, 1, 1],
+]
+
+   let rows = Matrix.length
+   let cols = Matrix[0].length
+
+   let rowZero = new Array(rows).fill(false)
+   let colZero = new Array(cols).fill(false)
+
+      STEP 1: MARK ROWS & COLUMNS
+   for (let i = 0; i < rows; i++) {
+     for (let j = 0; j < cols; j++) {
+       if (Matrix[i][j] === 0) {
+         rowZero[i] = true
+         colZero[j] = true
+       }
+     }
+   }
+
+      STEP 2: SET ZERO
+   for (let i = 0; i < rows; i++) {
+     for (let j = 0; j < cols; j++) {
+       if (rowZero[i] || colZero[j]) {
+         Matrix[i][j] = 0
+       }
+     }
+   }
+
+   console.log(Matrix)
+
+
+
