@@ -1,19 +1,35 @@
-function insertSort() {
-  const array = [5, 3, 4, 1, 2]
+// function insertionAlgorithem() {
+//   const arr = [5, 2, 4, 6, 1, 3]
 
-  for (let i = 1; i < array.length; i++) {
-    let key = array[i]
+//   for (let i = 1; i < arr.length; i++) {
+//     let key = arr[i]
+//     let j = i - 1
+
+//     while (i >= 0 && arr[j] > key) {
+//       arr[j + 1] = arr[j]
+//       j--
+//     }
+//     arr[j + 1] = key
+//   }
+//   return arr
+// }
+// console.log(insertionAlgorithem())
+
+function insertionAlgorithem() {
+  const arr = [5, 2, 4, 6, 1, 3]
+
+  for (let i = 1; i < arr.length; i++) {
+    let key = arr[i]
     let j = i - 1
 
-    while (j >= 0 && array[j] > key) {
-      array[j + 1] = array[j]
+    while (i >= 0 && arr[j] > key) {
+      arr[j + 1] = arr[j]
       j--
     }
 
-    array[j + 1] = key
+    arr[j + 1] = key
   }
 
-  return array
+  return arr
 }
-
-console.log(insertSort())
+console.log(insertionAlgorithem())
