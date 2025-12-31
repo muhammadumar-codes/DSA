@@ -253,6 +253,8 @@ function maxSubBurry() {
   const arr = [-1, -2, -3, -5, 4, 5, 2]
   let maximum = -Infinity
   let sum = 0
+
+  
   for (let i = 0; i < arr.length; i++) {
     sum += arr[i]
     maximum = Math.max(sum, maximum)

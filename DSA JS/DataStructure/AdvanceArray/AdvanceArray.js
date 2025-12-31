@@ -179,18 +179,9 @@
 
 // console.log(merge);
 
-
-
-
-
-
-
 // finding the maximum Profit in
 
-
-
-// Incomplete the problems 
-
+// Incomplete the problems
 
 // function maxProfit() {
 //   let prices = [7, 6, 4, 3, 1]
@@ -210,15 +201,7 @@
 
 // console.log(maxProfit()) // You must ADD ()
 
-
-
-
-
-
-
-
-// in complete the problem yet to complete it 
-
+// in complete the problem yet to complete it
 
 // const array = [1, 1, 0, 3,4,5,0, 2, 1, 0, 2]
 
@@ -243,13 +226,49 @@
 
 // console.log(array)
 
+//Dutch National Problem is it :
+
+/*
+let array = [1, 1, 0, 0, 2, 1, 0]
+
+let i = 0,
+  j = 0,
+  k = array.length - 1
+
+while (i < k) {
+  if (array[i] === 0) {
+    ;[array[i], array[j]] = [array[j], array[i]]
+    i++
+    j++
+  } else if (array[i] === 2) {
+    ;[array[i], array[k]] = [array[k], array[i]]
+    k--
+  } else {
+    i++
+  }
+}
+
+console.log(array)
 
 
+*/
 
+//kadne's algorithem is it  :
 
+// function maxSubrray() {
+//   const array = [4, -1, 2, 1]
 
+//   let maximum = -Infinity
+//   let sum = 0
 
+//   for (let i = 0; i < array.length; i++) {
+//     sum += array[i]
+//     maximum = Math.max(sum, maximum)
+//   }
 
+//   if (sum <= 0) return 0
+//   else return maximum
+// }
 
-
-
+// const resultMaxValue = maxSubrray()
+// console.log(resultMaxValue)
