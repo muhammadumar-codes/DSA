@@ -289,23 +289,72 @@ Explanation:
 2 appears 3 times, which is more than n/2 = 3.
 
 
-function majorityElement() {
-  const array = [1, 2, 2, 2, 1, 1]
-  let ans = array[0]
-  let count = 1
+// Majority elements in the array using morves' alogrithems
+function MajorityElement() {
+  const arr = [1, 2, 2, 2, 1, 1]
 
-  for (let i = 0; i < array.length ; i++) {
+  let count = 0
+  let Ans = null
+
+  for (let i = 0; i < arr.length; i++) {
     if (count === 0) {
-      ans = array[i]
+      Ans = arr[i]
       count = 1
-    } else if (array[i] === ans) count++
-    else count--
+    } else if (arr[i] === Ans) {
+      count++
+    } else {
+      count--
+    }
   }
 
-  return ans
+  return Ans
 }
 
-console.log('The answer of value of it :', majorityElement())
+console.log(MajorityElement())
+
+
+
+Dry Run The code 
+
+
+Ans = null
+count = 0
+i = 0 → arr[0] = 1
+ini
+Copy code
+count === 0 → Ans = 1
+count = 1
+i = 1 → arr[1] = 2
+lua
+Copy code
+2 !== 1 → count--
+count = 0
+i = 2 → arr[2] = 2
+ini
+Copy code
+count === 0 → Ans = 2
+count = 1
+i = 3 → arr[3] = 2
+ini
+Copy code
+2 === 2 → count++
+count = 2
+i = 4 → arr[4] = 1
+lua
+Copy code
+1 !== 2 → count--
+count = 1
+i = 5 → arr[5] = 1
+lua
+Copy code
+1 !== 2 → count--
+count = 0
+🏁 FINAL ANSWER
+ini
+Copy code
+Ans = 2
+
+
 
 ------------------------------------------------------------------------------
 
