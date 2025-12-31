@@ -76,25 +76,30 @@ Sorted Array:
 ## ✅ Selection Sort Code (JavaScript)
 
 ```js
-const array = [10, 5, 12, 1, 3]
-let n = array.length
+function selectionSort() {
+  // array
+  const arr = [5, 3, 4, 1, 2]
+  let n = arr.length
 
-for (let i = 0; i < n - 1; i++) {
-  let min = i
+  for (let i = 0; i < n - 1; i++) {
+    let min = i
 
-  for (let j = i + 1; j < n; j++) {
-    if (array[min] > array[j]) {
-      min = j
+    for (let j = i + 1; j < n; j++) {
+      if (arr[j] < arr[min]) {
+        min = j
+      }
     }
+
+    let temp = arr[i]
+    arr[i] = arr[min]
+    arr[min] = temp
   }
 
-  if (min !== i) {
-    ;[array[i], array[min]] = [array[min], array[i]]
-  }
+  return arr
 }
 
-console.log(array) // [1, 3, 5, 10, 12]
-```
+console.log(selectionSort())
+
 
 ---
 
@@ -138,3 +143,4 @@ console.log(array) // [1, 3, 5, 10, 12]
 ---
 
 🔥 **Selection Sort builds strong fundamentals for understanding advanced sorting algorithms**
+```
