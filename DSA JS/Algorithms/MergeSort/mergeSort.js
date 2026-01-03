@@ -1,38 +1,31 @@
-function conquer(arr, first, mid, last) {
-  let temp = new Array(last - first + 1);
-  let i = first,
-    j = mid + 1,
-    k = 0;
+function mergeSort(arr) {
+  if (arr.length <= 1) return arr; // base case
 
-  while (i <= mid && j <= last) {
-    if (arr[i] <= arr[j]) {
-      temp[k++] = arr[i++];
+  const mid = Math.floor(arr.length / 2);
+
+  const left = mergeSort(arr.slice(0, mid));  // left half
+  const right = mergeSort(arr.slice(mid));    // right half
+
+  return merge(left, right); // merge two sorted halves
+}
+
+function merge(left, right) {
+  let result = [];
+  let i = 0;
+  let j = 0;
+
+  while (i < left.length && j < right.length) {
+    if (left[i] < right[j]) { // compare left & right
+      result.push(left[i]);
+      i++;
     } else {
-      temp[k++] = arr[j++];
+      result.push(right[j]);
+      j++;
     }
   }
 
-  while (i <= mid) {
-    temp[k++] = arr[i++];
-  }
-
-  while (j <= last) {
-    temp[k++] = arr[j++];
-  }
-
-  // copy temp back to arr
-  for (let x = 0; x < temp.length; x++) {
-    arr[first + x] = temp[x];
-  }
+  // push remaining elements if any
+  return result.concat(left.slice(i)).concat(right.slice(j));
 }
 
-function divide(arr, first, last) {
-  if (first >= last) return;
-
-  let mid = Math.floor((first + last) / 2);
-
-  divide(arr, first, mid); // left part
-  divide(arr, mid + 1, last); // right part
-
-  conquer(arr, first, mid, last); // merge
-}
+console.log(mergeSort([6, 3, 1, 5, 2, 4]));

@@ -1,3 +1,4 @@
+
 # 🔵 Bubble Sort Algorithm (JavaScript)
 
 ## 📌 Definition
