@@ -115,7 +115,7 @@ console.log('Hello\nWorld')
 
 ```js
 'Hello World'.startsWith('Hello')
-'Hello World'.endsWith('World')
+'He llo World'.endsWith('World')
 ```
 
 ---

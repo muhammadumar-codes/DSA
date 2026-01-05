@@ -214,6 +214,26 @@ for (const row of matrix) {
 }
 ```
 
+// Data
+const users = [
+{ id: 1, name: 'Rolex Submariner', brand: 'Rolex' },
+{ id: 2, name: 'Omega Speedmaster', brand: 'Omega' },
+{ id: 3, name: 'Tag Heuer Carrera', brand: 'Tag Heuer' },
+{ id: 4, name: 'Breitling Navitimer', brand: 'Breitling' },
+{ id: 5, name: 'Cartier Santos', brand: 'Cartier' },
+]
+
+```js How to Delete a users using findIndex and Delete using SpliceMethod
+const id = 3
+
+const result = users.findIndex((item) => item.id === id)
+
+const RemainingUser = users.splice(result, 1)
+
+console.log(RemainingUser)
+
+console.log(users)
+
 ---
 
 ## 1️⃣3️⃣ Important Interview Notes 🔥
@@ -257,3 +277,4 @@ for (const row of matrix) {
 5️⃣ LeetCode Array Problems
 
 👉 Just say: **"Jani next – Strings master notes"** 💪
+```
