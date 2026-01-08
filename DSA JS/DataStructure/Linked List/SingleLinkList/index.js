@@ -1,99 +1,118 @@
-// Single LinkList With full details
+// // Craete A Node
 
-class Node {
-  constructor(data) {
-    this.data = data;
-    this.next = null;
-  }
-}
+// class Node {
+//   constructor(data) {
+//     this.data = data
+//     this.next = null
+//   }
+// }
 
-class linkList {
-  constructor() {
-    this.head = null;
-  }
+// // Linklist
+// class LinkList {
+//   constructor() {
+//     this.head = null
+//   }
 
-  // Insert At the Head.
+//   //Insert At Head
 
-  insertAtHead(data) {
-    let newNode = new Node(data);
-    newNode.next = this.head;
-    this.head = newNode;
-  }
+//   insertAtHead(data) {
+//     let newNode = new Node(data)
+//     newNode.next = this.head
+//     this.head = newNode
+//   }
 
-  // insert at tail
+//   // Insert At Tail
 
-  insertAtTail(data) {
-    let newNode = new Node(data);
-    if (this.head === null) {
-      this.head = newNode;
-      return;
-    }
+//   insertAtTail(data) {
+//     let newNode = new Node(data)
 
-    let temp = this.head;
-    while (temp.next !== null) {
-      temp = temp.next;
-    }
-    temp.next = newNode;
-  }
+//     if (!this.head) {
+//       this.head = newNode
+//       return
+//     }
+//     let temp = this.head
+//     while (temp.next != null) {
+//       temp = temp.next
+//     }
+//     temp.next = newNode
+//   }
 
-  // Print All The Data
+//   // insert At Position :
 
-  // delete the head
-  deleteHead() {
-    if (this.head === null) return;
-    this.head = this.head.next;
-  }
+//   // Show length
 
-  deleteAtTail() {
-    if (this.head === null || this.head.next === null) {
-      this.head = null;
-    }
+//   length() {
+//     let count = 0
+//     let temp = this.head
 
-    let temp = this.head;
-    while (temp.next.next !== null) {
-      temp = temp.next;
-    }
-    temp.next = null;
-  }
+//     while (temp) {
+//       count++
+//       temp = temp.next
+//     }
+//     return count
+//   }
 
-  reverse() {
-    let prev = null;
-    let curr = this.head;
+//   // DELETE AT THE HEAD
 
-    while (curr !== null) {
-      let next = curr.next;
+//   deleteAtHead() {
+//     this.head = this.head.next
+//   }
 
-      curr.next = prev;
-      prev = curr;
-      curr = next;
-    }
+//   //REVERSE THE ARRAY
 
-    this.head = prev;
-  }
+//   reverse() {
+//     let prev = null
+//     let curr = this.head
 
-  print() {
-    let temp = this.head;
-    let result = " ";
-    while (temp !== null) {
-      // tell me about this how the temp is acccessing the data here
+//     while (curr) {
+//       let next = curr.next
+//       curr.next = prev
+//       prev = curr
+//       curr = next
+//     }
+//     this.head = prev
+//   }
 
-      result += temp.data + " -> ";
+//   // Print The Result
 
-      temp = temp.next;
-    }
-    console.log(result + "null");
-  }
-}
+//   print() {
+//     let temp = this.head
+//     let result = ''
 
-let list = new linkList();
-list.insertAtHead(10);
-list.insertAtHead(20);
-list.insertAtHead(30);
+//     while (temp) {
+//       result += temp.data + ' -> '
+//       temp = temp.next
+//     }
 
-list.insertAtHead(5615851);
-list.insertAtTail(563);
-list.insertAtTail(123411);
-list.deleteAtTail();
-list.reverse();
+//     console.log(result)
+//   }
+// }
 
-list.print();
+// const list = new LinkList()
+
+// //INSERT AT TAIL
+// list.insertAtTail(10)
+// list.insertAtTail(20)
+// list.insertAtTail(30)
+// list.insertAtTail(40)
+
+// // ISNERT AT HEAD
+// list.insertAtHead(5)
+
+// // REVERSE THE ARRAY
+// list.reverse()
+
+// // DELETE AT THE HEAD
+// list.deleteAtHead()
+
+// // SHOW ALL LIST
+// list.print()
+
+// // SHOW THE LENGTH OF ALL LIST
+// console.log('The Length OF link List is :', list.length())
+
+
+
+
+
+

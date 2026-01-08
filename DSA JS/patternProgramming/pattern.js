@@ -1,13 +1,12 @@
-let prompt = require("prompt-sync")();
+let rows = 5
 
-let rows = Number(prompt("Enter Your rows"))
+for (let i = 1; i < rows; i++) {
+  console.log(' \n')
 
-for (let i = 1; i <= rows; i++) {
-  for (let j = 1; j <= rows; j++) {
-    if (i===j || i +j ===rows+1){
-      process.stdout.write(" *")
-    }else process.stdout.write(" ")
-    
+  let asciii = 65
+
+  for (let j = 1; j < i; j++) {
+    process.stdout.write(String.fromCharCode(`  ${asciii} `))
+    asciii++
   }
-  console.log("");
 }
