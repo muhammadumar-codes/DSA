@@ -1,118 +1,135 @@
-// // Craete A Node
+// Craete A Node
 
-// class Node {
-//   constructor(data) {
-//     this.data = data
-//     this.next = null
-//   }
-// }
+class Node {
+  constructor(data) {
+    this.data = data
+    this.next = null
+  }
+}
 
-// // Linklist
-// class LinkList {
-//   constructor() {
-//     this.head = null
-//   }
+// Linklist
+class LinkList {
+  constructor() {
+    this.head = null
+  }
 
-//   //Insert At Head
+  //Insert At Head
 
-//   insertAtHead(data) {
-//     let newNode = new Node(data)
-//     newNode.next = this.head
-//     this.head = newNode
-//   }
+  insertAtHead(data) {
+    let newNode = new Node(data)
+    newNode.next = this.head
+    this.head = newNode
+  }
 
-//   // Insert At Tail
+  // Insert At Tail
 
-//   insertAtTail(data) {
-//     let newNode = new Node(data)
+  insertAtTail(data) {
+    let newNode = new Node(data)
 
-//     if (!this.head) {
-//       this.head = newNode
-//       return
-//     }
-//     let temp = this.head
-//     while (temp.next != null) {
-//       temp = temp.next
-//     }
-//     temp.next = newNode
-//   }
+    if (!this.head) {
+      this.head = newNode
+      return
+    }
+    let temp = this.head
+    while (temp.next != null) {
+      temp = temp.next
+    }
+    temp.next = newNode
+  }
 
-//   // insert At Position :
+  // insert At Position :
+  insertAtPosition(data, pos) {
+    if (pos === 0) {
+      this.insertAtHead(data)
+      return
+    }
 
-//   // Show length
+    let temp = this.head
+    let newNode = new Node(data)
 
-//   length() {
-//     let count = 0
-//     let temp = this.head
+    for (let i = 0; i < pos - 1; i++) {
+      temp = temp.next
+    }
 
-//     while (temp) {
-//       count++
-//       temp = temp.next
-//     }
-//     return count
-//   }
+    if (temp === null) {
+      console.log('INVALIDE  POSITION')
+      return
+    }
 
-//   // DELETE AT THE HEAD
+    newNode.next = temp.next
+    temp.next = newNode
+  }
+  // Show length
 
-//   deleteAtHead() {
-//     this.head = this.head.next
-//   }
+  length() {
+    let temp = this.head
+    let count = 0
+    while (temp) {
+      count++
+      temp = temp.next
+    }
+    return count
+  }
+  // DELETE AT THE HEAD
 
-//   //REVERSE THE ARRAY
+  deleteAtHead() {
+    this.head = this.head.next
+  }
 
-//   reverse() {
-//     let prev = null
-//     let curr = this.head
+  //   INSERT AT POSITION
 
-//     while (curr) {
-//       let next = curr.next
-//       curr.next = prev
-//       prev = curr
-//       curr = next
-//     }
-//     this.head = prev
-//   }
+  //REVERSE THE ARRAY
 
-//   // Print The Result
+  reverse() {
+    let prev = null
+    let curr = this.head
 
-//   print() {
-//     let temp = this.head
-//     let result = ''
+    while (curr != null) {
+      let next = curr.next
+      curr.next = prev
+      prev = curr
+      curr = next
+    }
+    this.head = prev
+  }
 
-//     while (temp) {
-//       result += temp.data + ' -> '
-//       temp = temp.next
-//     }
+  // Print The Result
 
-//     console.log(result)
-//   }
-// }
+  print() {
+    let temp = this.head
+    let result = ''
 
-// const list = new LinkList()
+    while (temp) {
+      result += temp.data + ' -> '
+      temp = temp.next
+    }
 
-// //INSERT AT TAIL
-// list.insertAtTail(10)
-// list.insertAtTail(20)
-// list.insertAtTail(30)
-// list.insertAtTail(40)
+    console.log(result)
+  }
+}
 
-// // ISNERT AT HEAD
-// list.insertAtHead(5)
+const list = new LinkList()
 
-// // REVERSE THE ARRAY
-// list.reverse()
+//INSERT AT TAIL
+list.insertAtTail(10)
+list.insertAtTail(20)
+list.insertAtTail(30)
+list.insertAtTail(40)
 
-// // DELETE AT THE HEAD
-// list.deleteAtHead()
+// ISNERT AT HEAD
+list.insertAtHead(5)
 
-// // SHOW ALL LIST
-// list.print()
+// INSERT AT POSITION
 
-// // SHOW THE LENGTH OF ALL LIST
-// console.log('The Length OF link List is :', list.length())
+list.insertAtPosition(40000000, 2)
 
+//REVERSE THE LINKLIST
 
+// DELETE AT THE HEAD
+list.deleteAtHead()
 
+// SHOW ALL LIST
+list.print()
 
-
-
+// SHOW THE LENGTH OF ALL LIST
+console.log('The Length OF link List is :', list.length())

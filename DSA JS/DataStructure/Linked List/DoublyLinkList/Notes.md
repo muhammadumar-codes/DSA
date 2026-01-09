@@ -63,6 +63,7 @@ insertAtHead(data) {
     this.head.prev = newNode;
   }
 
+
   this.head = newNode;
 }
 ```
