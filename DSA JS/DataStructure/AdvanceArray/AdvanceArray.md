@@ -7,24 +7,24 @@
 > Linear means: data is arranged **one after another**.
 
 ```js
-const arr = [];
-arr.push("Hello");
-arr.push(1);
-arr.pop();
-console.log(arr[0]);
+const arr = []
+arr.push('Hello')
+arr.push(1)
+arr.pop()
+console.log(arr[0])
 ```
 
 ---
 
 ## 2️⃣ Important Properties
 
-* Index starts from **0**
-* Arrays are **dynamic** in JS
-* Can store **mixed data types**
-* Arrays are **objects internally**
+- Index starts from **0**
+- Arrays are **dynamic** in JS
+- Can store **mixed data types**
+- Arrays are **objects internally**
 
 ```js
-const mixed = [1, "two", true, null];
+const mixed = [1, 'two', true, null]
 ```
 
 ---
@@ -34,9 +34,9 @@ const mixed = [1, "two", true, null];
 Yes, JS allows sparse arrays.
 
 ```js
-const arr = [];
-arr[5] = 100;
-console.log(arr); // empty slots before index 5
+const arr = []
+arr[5] = 100
+console.log(arr) // empty slots before index 5
 ```
 
 ⚠️ Creates **empty items** → avoid in DSA unless required.
@@ -48,14 +48,14 @@ console.log(arr); // empty slots before index 5
 ### Array Literal (Recommended)
 
 ```js
-const a = [1, 2, 3];
+const a = [1, 2, 3]
 ```
 
 ### Array Constructor
 
 ```js
-const b = new Array(3); // length = 3
-b.push("Hi");
+const b = new Array(3) // length = 3
+b.push('Hi')
 ```
 
 ⚠️ `new Array(3)` creates **empty slots**, not values.
@@ -67,17 +67,17 @@ b.push("Hi");
 ### Using Loop
 
 ```js
-let sum = 0;
-const arr = [2, 3, 5];
+let sum = 0
+const arr = [2, 3, 5]
 for (let i = 0; i < arr.length; i++) {
-  sum += arr[i];
+  sum += arr[i]
 }
 ```
 
 ### Using `reduce`
 
 ```js
-const sum = arr.reduce((acc, curr) => acc + curr, 0);
+const sum = arr.reduce((acc, curr) => acc + curr, 0)
 ```
 
 📌 **Interview Tip:** `reduce` is preferred in functional JS.
@@ -88,12 +88,12 @@ const sum = arr.reduce((acc, curr) => acc + curr, 0);
 
 ```js
 function maximum(arr) {
-  if (!Array.isArray(arr)) return "Invalid Array";
-  let max = arr[0];
+  if (!Array.isArray(arr)) return 'Invalid Array'
+  let max = arr[0]
   for (let i = 1; i < arr.length; i++) {
-    if (arr[i] > max) max = arr[i];
+    if (arr[i] > max) max = arr[i]
   }
-  return max;
+  return max
 }
 ```
 
@@ -104,9 +104,9 @@ function maximum(arr) {
 ## 7️⃣ Minimum Element
 
 ```js
-let min = arr[0];
+let min = arr[0]
 for (let i = 1; i < arr.length; i++) {
-  if (arr[i] < min) min = arr[i];
+  if (arr[i] < min) min = arr[i]
 }
 ```
 
@@ -116,18 +116,18 @@ for (let i = 1; i < arr.length; i++) {
 
 ```js
 function secondMax(arr) {
-  let max = -Infinity;
-  let sMax = -Infinity;
+  let max = -Infinity
+  let sMax = -Infinity
 
   for (const num of arr) {
     if (num > max) {
-      sMax = max;
-      max = num;
+      sMax = max
+      max = num
     } else if (num > sMax && num < max) {
-      sMax = num;
+      sMax = num
     }
   }
-  return sMax;
+  return sMax
 }
 ```
 
@@ -140,19 +140,21 @@ function secondMax(arr) {
 ### With Extra Space
 
 ```js
-const rev = [];
+const rev = []
 for (let i = arr.length - 1; i >= 0; i--) {
-  rev.push(arr[i]);
+  rev.push(arr[i])
 }
 ```
 
 ### Without Extra Space (Best)
 
 ```js
-let i = 0, j = arr.length - 1;
+let i = 0,
+  j = arr.length - 1
 while (i < j) {
-  [arr[i], arr[j]] = [arr[j], arr[i]];
-  i++; j--;
+  ;[arr[i], arr[j]] = [arr[j], arr[i]]
+  i++
+  j--
 }
 ```
 
@@ -163,13 +165,14 @@ while (i < j) {
 ## 🔟 Move All Zeros to Front
 
 ```js
-let i = 0, j = 0;
+let i = 0,
+  j = 0
 while (i < arr.length) {
   if (arr[i] === 0) {
-    [arr[i], arr[j]] = [arr[j], arr[i]];
-    j++;
+    ;[arr[i], arr[j]] = [arr[j], arr[i]]
+    j++
   }
-  i++;
+  i++
 }
 ```
 
@@ -199,14 +202,14 @@ while (i < arr.length) {
 
 ```js
 const matrix = [
-  [1,2,3],
-  [4,5,6],
-  [7,8,9]
-];
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+]
 
 for (const row of matrix) {
   for (const value of row) {
-    console.log(value);
+    console.log(value)
   }
 }
 ```
@@ -215,11 +218,11 @@ for (const row of matrix) {
 
 ## 1️⃣3️⃣ Important Interview Notes 🔥
 
-* Arrays are **objects** → passed by reference
-* `typeof [] === 'object'`
-* JS arrays are **dynamic**, unlike C++
-* Avoid sparse arrays in DSA
-* Prefer `for` loop for performance
+- Arrays are **objects** → passed by reference
+- `typeof [] === 'object'`
+- JS arrays are **dynamic**, unlike C++
+- Avoid sparse arrays in DSA
+- Prefer `for` loop for performance
 
 ---
 
@@ -271,9 +274,9 @@ for (const row of matrix) {
 
 **Algorithm (In-place):**
 
-* Store first element
-* Shift all elements left
-* Put stored value at last index
+- Store first element
+- Shift all elements left
+- Put stored value at last index
 
 **Time:** O(n) | **Space:** O(1)
 
@@ -370,7 +373,9 @@ function removeDuplicates(arr) {
 **Time:** O(n + m) | **Space:** O(n + m)
 
 ```js
-let i = 0, j = 0, k = 0
+let i = 0,
+  j = 0,
+  k = 0
 while (i < arr1.length && j < arr2.length) {
   merge[k++] = arr1[i] < arr2[j] ? arr1[i++] : arr2[j++]
 }
@@ -387,7 +392,8 @@ while (j < arr2.length) merge[k++] = arr2[j++]
 **Time:** O(n) | **Space:** O(1)
 
 ```js
-let min = prices[0], maxProfit = 0
+let min = prices[0],
+  maxProfit = 0
 for (let price of prices) {
   min = Math.min(min, price)
   maxProfit = Math.max(maxProfit, price - min)
@@ -403,7 +409,9 @@ for (let price of prices) {
 **Time:** O(n) | **Space:** O(1)
 
 ```js
-let low = 0, mid = 0, high = arr.length - 1
+let low = 0,
+  mid = 0,
+  high = arr.length - 1
 while (mid <= high) {
   if (arr[mid] === 0) [arr[low++], arr[mid++]] = [arr[mid], arr[low]]
   else if (arr[mid] === 2) [arr[mid], arr[high--]] = [arr[high], arr[mid]]
@@ -417,14 +425,21 @@ while (mid <= high) {
 
 **Time:** O(n) | **Space:** O(1)
 
-```js
-let maxSum = -Infinity, curr = 0
-for (let num of arr) {
-  curr += num
-  maxSum = Math.max(maxSum, curr)
-  if (curr < 0) curr = 0
+<!-- Watch The video For this Algorithem -->
+
+https://youtube.com/shorts/Az8S1ZGpV_M?si=petptyguF_fhBBrX
+
+````js
+function maxSubArray(arr) {
+  let currentSum = arr[0];
+  let maxSum = arr[0];
+
+  for (let i = 1; i < arr.length; i++) {
+    currentSum = Math.max(arr[i], currentSum + arr[i]);
+    maxSum = Math.max(maxSum, currentSum);
+  }
+  return maxSum;
 }
-```
 
 ---
 
@@ -441,18 +456,18 @@ for (let num of arr) {
   count += (num === candidate) ? 1 : -1
 }
 return candidate
-```
+````
 
 ---
 
 ## 🧠 Interview Patterns to Remember
 
-* Rotation → modulo + shifting
-* Sorted array → two pointers
-* Max/min problems → tracking variables
-* Subarray sum → Kadane
-* Frequency dominance → Moore’s Voting
-* 0/1/2 sorting → Three pointers
+- Rotation → modulo + shifting
+- Sorted array → two pointers
+- Max/min problems → tracking variables
+- Subarray sum → Kadane
+- Frequency dominance → Moore’s Voting
+- 0/1/2 sorting → Three pointers
 
 ---
 

@@ -234,6 +234,8 @@ console.log(RemainingUser)
 
 console.log(users)
 
+
+
 ---
 
 ## 1️⃣3️⃣ Important Interview Notes 🔥
@@ -277,4 +279,46 @@ console.log(users)
 5️⃣ LeetCode Array Problems
 
 👉 Just say: **"Jani next – Strings master notes"** 💪
+```
+
+```js
+
+int removeDuplicates(int arr[], int n) {
+    int j = 0;
+    for(int i = 1; i < n; i++) {
+        if(arr[i] != arr[j]) {
+            j++;
+            arr[j] = arr[i];
+        }
+    }
+    return j + 1;
+}
+
+```
+
+```js
+
+This is Two Sum algorithem Brute force
+
+function twoSum(arr, target) {
+  let i = 0;
+  let j = arr.length - 1;
+
+  while (i < j) {
+    let sum = arr[i] + arr[j];
+
+    if (sum === target) {
+      return [i, j];
+    } else if (sum < target) {
+      i++;
+    } else {
+      j--;
+    }
+  }
+
+  return [];
+}
+
+console.log(twoSum([2,3,1], 3)); // [0,2]
+
 ```
