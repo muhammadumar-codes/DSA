@@ -6,13 +6,327 @@
 
 > Linear means: data is arranged **one after another**.
 
+````js Array Methods
+# 📚 JavaScript Array Methods – Complete Notes (Google / FAANG Level)
+
+> ✍️ Prepared for **DSA + JavaScript Interviews**
+>
+> Focus: **Which methods return a value** vs **which modify original array (in-place)**
+
+---
+
+## 🧠 What is an Array?
+
+An **Array** is a collection of elements stored in **contiguous memory locations**.
+
 ```js
-const arr = []
-arr.push('Hello')
-arr.push(1)
-arr.pop()
-console.log(arr[0])
+let arr = [10, 20, 30, 40];
+````
+
+---
+
+# 🟢 CATEGORY 1: Methods that **DO NOT return** a new array
+
+> ⚠️ These **modify the original array**
+
+---
+
+## 1️⃣ push() ✅ (IN-PLACE)
+
+Adds element(s) at the **end**
+
+```js
+let arr = [1, 2]
+arr.push(3)
+// arr = [1, 2, 3]
 ```
+
+- 🔁 Modifies array
+- 📤 Returns **new length**
+
+---
+
+## 2️⃣ pop() ✅ (IN-PLACE)
+
+Removes element from **end**
+
+```js
+let arr = [1, 2, 3]
+arr.pop()
+// arr = [1, 2]
+```
+
+- 🔁 Modifies array
+- 📤 Returns **removed element**
+
+---
+
+## 3️⃣ shift() ✅ (IN-PLACE)
+
+Removes element from **start**
+
+```js
+let arr = [1, 2, 3]
+arr.shift()
+// arr = [2, 3]
+```
+
+- ⏱ O(n)
+- 📤 Returns removed element
+
+---
+
+## 4️⃣ unshift() ✅ (IN-PLACE)
+
+Adds element(s) at **start**
+
+```js
+let arr = [2, 3]
+arr.unshift(1)
+// arr = [1, 2, 3]
+```
+
+- ⏱ O(n)
+- 📤 Returns new length
+
+---
+
+## 5️⃣ splice() ⚠️ (VERY IMPORTANT)
+
+Add / Remove / Replace elements
+
+```js
+let arr = [1, 2, 3, 4]
+arr.splice(1, 2, 99, 100)
+// arr = [1, 99, 100, 4]
+```
+
+- 🔁 Modifies original array
+- 📤 Returns **removed elements**
+
+---
+
+## 6️⃣ sort() ⚠️ (IN-PLACE)
+
+Sorts array
+
+```js
+let arr = [10, 2, 5]
+arr.sort((a, b) => a - b)
+```
+
+- 🔁 Modifies array
+- ⚠️ String sort by default
+
+---
+
+## 7️⃣ reverse() ✅ (IN-PLACE)
+
+```js
+let arr = [1, 2, 3]
+arr.reverse()
+// [3, 2, 1]
+```
+
+---
+
+# 🔵 CATEGORY 2: Methods that **RETURN a new array** (SAFE)
+
+---
+
+## 8️⃣ map() ⭐⭐⭐
+
+Transforms each element
+
+```js
+let arr = [1, 2, 3]
+let res = arr.map((x) => x * 2)
+// [2, 4, 6]
+```
+
+- ❌ Does NOT modify original
+- 📤 Returns new array
+
+---
+
+## 9️⃣ filter() ⭐⭐⭐
+
+Returns elements based on condition
+
+```js
+let arr = [1, 2, 3, 4]
+let res = arr.filter((x) => x % 2 === 0)
+// [2, 4]
+```
+
+---
+
+## 🔟 slice() ⭐⭐⭐
+
+Extracts part of array
+
+```js
+let arr = [1, 2, 3, 4]
+let res = arr.slice(1, 3)
+// [2, 3]
+```
+
+- ❌ Original unchanged
+
+---
+
+## 1️⃣1️⃣ concat()
+
+Merge arrays
+
+```js
+let a = [1, 2]
+let b = [3, 4]
+let c = a.concat(b)
+```
+
+---
+
+# 🟣 CATEGORY 3: Methods that return **SINGLE VALUE**
+
+---
+
+## 1️⃣2️⃣ reduce() ⭐⭐⭐⭐⭐
+
+Most powerful method
+
+```js
+let arr = [1, 2, 3]
+let sum = arr.reduce((acc, curr) => acc + curr, 0)
+// 6
+```
+
+- Used for sum, max, frequency map
+
+---
+
+## 1️⃣3️⃣ find()
+
+Returns first match
+
+```js
+let arr = [10, 20, 30]
+arr.find((x) => x > 15)
+// 20
+```
+
+---
+
+## 1️⃣4️⃣ findIndex()
+
+Returns index
+
+```js
+arr.findIndex((x) => x === 20)
+```
+
+---
+
+## 1️⃣5️⃣ includes()
+
+```js
+arr.includes(10) // true
+```
+
+---
+
+## 1️⃣6️⃣ indexOf() / lastIndexOf()
+
+---
+
+# 🟡 CATEGORY 4: Iteration Methods (NO RETURN)
+
+---
+
+## 1️⃣7️⃣ forEach()
+
+```js
+arr.forEach((x) => console.log(x))
+```
+
+- ❌ No return
+- ⚠️ Cannot break
+
+---
+
+# 🔴 CATEGORY 5: Utility / Conversion
+
+---
+
+## 1️⃣8️⃣ join()
+
+```js
+;['a', 'b'].join('-') // 'a-b'
+```
+
+---
+
+## 1️⃣9️⃣ toString()
+
+---
+
+## 2️⃣0️⃣ Array.from()
+
+```js
+Array.from('abc') // ['a','b','c']
+```
+
+---
+
+## 2️⃣1️⃣ Array.isArray()
+
+```js
+Array.isArray([]) // true
+```
+
+---
+
+# 📊 FINAL INTERVIEW SUMMARY TABLE
+
+| Method   | Modifies Original? | Returns   |
+| -------- | ------------------ | --------- |
+| push     | ✅                 | length    |
+| pop      | ✅                 | element   |
+| shift    | ✅                 | element   |
+| unshift  | ✅                 | length    |
+| splice   | ✅                 | array     |
+| sort     | ✅                 | array     |
+| reverse  | ✅                 | array     |
+| map      | ❌                 | array     |
+| filter   | ❌                 | array     |
+| slice    | ❌                 | array     |
+| reduce   | ❌                 | value     |
+| forEach  | ❌                 | undefined |
+| find     | ❌                 | element   |
+| includes | ❌                 | boolean   |
+
+---
+
+## 🎯 Google Interview Tips
+
+- ❓ Difference between **map vs forEach**
+- ❓ Why reduce is powerful?
+- ❓ How to avoid mutation?
+- ❓ Time Complexity of push vs shift
+
+---
+
+🔥 **Next Notes Suggestions**
+
+- String methods
+- Object methods
+- Sliding Window problems
+- Prefix Sum
+- Two Pointer Patterns
+
+---
+
+✍️ _Prepared by Jani – DSA & JavaScript Master Notes_
 
 ---
 
