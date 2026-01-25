@@ -195,15 +195,69 @@ let c = a.concat(b)
 
 Most powerful method
 
-```js
+````js
 let arr = [1, 2, 3]
 let sum = arr.reduce((acc, curr) => acc + curr, 0)
 // 6
-```
+
+
+const fruits = ['apple', 'banana', 'apple', 'orange', 'banana']
+
+const count = fruits.reduce((acc, fruit) => {
+  console.log(acc)
+
+  acc[fruit] = (acc[fruit] || 0) + 1
+  return acc
+}, {})
+
+console.log(count)
+// { apple: 2, banana: 2, orange: 1 }
+
+const arr = [[1, 2], [3, 4], [5]]
+
+const flat = arr.reduce((acc, curr) => {
+  return acc.concat(curr)
+}, [])
+
+console.log(flat) // [1,2,3,4,5]
+
+  const users = [
+    { id: 1, name: 'Ali' },
+    { id: 2, name: 'Sara' },
+  ]
+
+const userObj = users.reduce((acc, user) => {
+  acc[user.id] = user
+  return acc
+}, {})
+
+console.log(userObj)
+
+const cart = [
+  { item: 'Book', price: 300 },
+  { item: 'Pen', price: 50 },
+  { item: 'Notebook', price: 150 },
+]
+
+const total = cart.reduce((acc, product) => {
+  return acc + product.price
+}, 0)
+
+console.log(total) // 500
+
+
+
+
+
+
+
+
 
 - Used for sum, max, frequency map
 
 ---
+```js
+
 
 ## 1️⃣3️⃣ find()
 
@@ -213,7 +267,7 @@ Returns first match
 let arr = [10, 20, 30]
 arr.find((x) => x > 15)
 // 20
-```
+````
 
 ---
 
