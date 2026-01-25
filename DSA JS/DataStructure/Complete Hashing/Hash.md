@@ -44,3 +44,53 @@ function checkPangram(inputStr) {
 
 console.log(checkPangram('thequickbrownfoxjumpsoverthelazydog'))
 ```
+
+checking The frequence of each elements
+
+```js
+const arr = [1, 2, 3, 4, 5, 6, 6, 3, 2]
+
+let obj = {}
+
+for (let i = 0; i < arr.length; i++) {
+  let element = arr[i]
+
+  if (element in obj) {
+    obj[element] += 1
+  } else {
+    obj[element] = 1
+  }
+}
+
+console.log(obj)
+```
+
+```js
+const arr = [1, 2, 3, 4, 5, 6, 6, 3, 2]
+const resultCounter = arr.reduce((acc, curr) => {
+  acc[curr] = (acc[curr] || 0) + 1
+  return acc
+}, {})
+
+console.log(resultCounter)
+```
+
+```js Solve The problem which is The sort the people on leedcode
+/**
+ * @param {string[]} names
+ * @param {number[]} heights
+ * @return {string[]}
+ */
+var sortPeople = function (names, heights) {
+  let map = new Map()
+  for (let i = 0; i < names.length; i++) {
+    map.set(heights[i], names[i])
+  }
+  heights.sort((a, b) => b - a)
+  for (let i = 0; i < heights.length; i++) {
+    names[i] = map.get(heights[i])
+  }
+
+  return names
+}
+```
