@@ -1,4 +1,3 @@
-
 # 🔵 Bubble Sort Algorithm (JavaScript)
 
 ## 📌 Definition
@@ -46,7 +45,7 @@ Steps:
 Sorted Array:
 
 ```
-[1, 2, 4, 5]
+
 ```
 
 ---
@@ -74,6 +73,8 @@ Sorted Array:
 ---
 
 ## ✅ Bubble Sort Code (JavaScript)
+
+[1, 2, 4, 5]
 
 ```js
 function bubbleSort(arr) {

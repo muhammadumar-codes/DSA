@@ -94,3 +94,48 @@ var sortPeople = function (names, heights) {
   return names
 }
 ```
+
+```js
+Next to solve the problem that is the
+Two sum algorithem
+```
+
+```js
+Insetersection of the arrasy on leedcode to solvee it
+
+Subaray sum equal sum  equal to k
+
+
+
+var subarraySum = function(nums, k) {
+  let map = new Map()
+  map.set(0, 1)   // very important
+  let sum = 0
+  let count = 0
+
+  for (let num of nums) {
+    sum += num
+
+    if (map.has(sum - k)) {
+      count += map.get(sum - k)
+    }
+
+    map.set(sum, (map.get(sum) || 0) + 1)
+  }
+
+  return count
+}
+
+```
+
+```js
+problem
+next problem to solve it
+longest subaray
+
+
+
+problem
+longest consective elements sequn.ce
+
+```
