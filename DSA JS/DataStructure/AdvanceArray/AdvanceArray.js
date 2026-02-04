@@ -143,7 +143,7 @@
 // console.log(merge);
 
 // How  to merge the array
-
+a
 //How ot merge the Two arrayss
 
 // const array1 = [1, 2, 3];

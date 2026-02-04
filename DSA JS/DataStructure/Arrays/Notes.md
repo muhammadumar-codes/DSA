@@ -204,7 +204,7 @@ let sum = arr.reduce((acc, curr) => acc + curr, 0)
 const fruits = ['apple', 'banana', 'apple', 'orange', 'banana']
 
 const count = fruits.reduce((acc, fruit) => {
-  console.log(acc)
+
 
   acc[fruit] = (acc[fruit] || 0) + 1
   return acc

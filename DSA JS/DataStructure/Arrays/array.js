@@ -1,11 +1,8 @@
-const arr = [1, 2, 3, 4, 5]
-let i=0;
-let j=arr.length-1
-while (i<=j) {
-    [arr[j],arr[i]]=[arr[i],arr[j]]
-    i++
-    j--
-    
-}
+const fruits = ['apple', 'banana', 'apple', 'orange', 'banana']
+const count = fruits.reduce((acc, curr) => {
+  acc[curr] = (acc[curr] || 0) + 1
+  return acc
+}, {})
 
-console.log(arr)
+// This will output the correct count object: { apple: 2, banana: 2, orange: 1 }
+console.log(count) 
