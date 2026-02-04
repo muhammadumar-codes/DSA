@@ -1,19 +1,28 @@
 {
   "editor.mouseWheelZoom": true,
-  "workbench.settings.applyToAllProfiles": [
-    "workbench.settings.useSplitJSON"
-  ],
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit"
+    "source.fixAll": true,
+    "source.fixAll.eslint": true
   },
   "files.autoSave": "onWindowChange",
   "javascript.updateImportsOnFileMove.enabled": "always",
   "prettier.singleQuote": true,
   "prettier.semi": false,
-  "[javascriptreact]": {
-    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+  "prettier.trailingComma": "es5",
+  "prettier.printWidth": 80,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "terminal.integrated.focusAfterRun": "terminal"
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "terminal.integrated.focusAfterRun": true
 }
