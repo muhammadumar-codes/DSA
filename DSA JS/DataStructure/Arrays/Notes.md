@@ -651,6 +651,36 @@ console.log(users)
 
 ```js
 
+problem to merge the array in sorted form
+
+
+const a = [1, 3, 5]
+const b = [2, 4, 6]
+let merge = []
+
+let i = 0,
+  j = 0
+
+while (i < a.length && j < b.length) {
+  if (a[i] < b[j]) {
+    merge.push(a[i])
+    i++
+  } else {
+    merge.push(b[j])
+    j++
+  }
+}
+
+while (i < a.length) {
+  merge.push(a[i++])
+}
+while (j < b.length) {
+  merge.push(b[j++])
+}
+console.log(merge)
+
+
+
 int removeDuplicates(int arr[], int n) {
     int j = 0;
     for(int i = 1; i < n; i++) {
