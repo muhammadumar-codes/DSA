@@ -744,4 +744,30 @@ function twoSum(arr, target) {
 
 console.log(twoSum([2,3,1], 3)); // [0,2]
 
+
+
+Remove the duplicate elements
+const arr = [1, 2, 3, 3, 4, 4, 5]
+
+const unique = [...new Set(arr)]
+console.log(unique)
+
+
+
+
+const arr = [1, 1, 2, 2, 3, 4, 4]
+
+let j = 0
+for (let i = 1; i < arr.length; i++) {
+  if (arr[i] !== arr[j]) {
+    j++
+    arr[j] = arr[i]
+  }
+}
+
+arr.length = j + 1
+console.log(arr)
+
+
+
 ```
