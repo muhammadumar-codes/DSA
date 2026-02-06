@@ -1,20 +1,22 @@
     ==== *  DSA ROADMAP IN  JAVASCRIPT  TO LEARN *====
-    
 
-1. Array With Advance Array 
+<!-- Revice The Topics -->
+
+1. Array With Advance Array
 2. Algorithm
-3. String 
+3. String
 4. Recursion
-5. Pattern Programming  
+5. Pattern Programming
 6. Link List
 7. Stack
 8. Queue
 9. HashMap
+
+<!-- learn About it -->
+
 10. Tree
 11. Graph
 12. Dynamic Programming
-
-
 
 # Data Structures & Algorithms (DSA) — Complete Notes
 
@@ -27,9 +29,9 @@
 
 Why DSA matters for interviews:
 
-* Improves problem‑solving skills
-* Optimizes time & space
-* Core of FAANG / product‑based interviews
+- Improves problem‑solving skills
+- Optimizes time & space
+- Core of FAANG / product‑based interviews
 
 ---
 
@@ -37,17 +39,17 @@ Why DSA matters for interviews:
 
 ### Big‑O Notations
 
-* **O(1)** → Constant
-* **O(log n)** → Logarithmic
-* **O(n)** → Linear
-* **O(n log n)** → Efficient sorting
-* **O(n²)** → Nested loops
-* **O(2ⁿ)** → Exponential
+- **O(1)** → Constant
+- **O(log n)** → Logarithmic
+- **O(n)** → Linear
+- **O(n log n)** → Efficient sorting
+- **O(n²)** → Nested loops
+- **O(2ⁿ)** → Exponential
 
 ### Rules
 
-* Ignore constants
-* Worst case matters most
+- Ignore constants
+- Worst case matters most
 
 ---
 
@@ -55,8 +57,8 @@ Why DSA matters for interviews:
 
 ### Basics
 
-* Contiguous memory
-* Fixed size (static) / dynamic
+- Contiguous memory
+- Fixed size (static) / dynamic
 
 ### Common Operations
 
@@ -69,11 +71,11 @@ Why DSA matters for interviews:
 
 ### Important Problems
 
-* Reverse array
-* Maximum / minimum
-* Kadane’s Algorithm (max subarray sum)
-* Two Sum
-* Subarray sum = K
+- Reverse array
+- Maximum / minimum
+- Kadane’s Algorithm (max subarray sum)
+- Two Sum
+- Subarray sum = K
 
 ---
 
@@ -81,16 +83,16 @@ Why DSA matters for interviews:
 
 ### Key Concepts
 
-* Immutable (in JS, Java)
-* ASCII vs Unicode
+- Immutable (in JS, Java)
+- ASCII vs Unicode
 
 ### Common Problems
 
-* Reverse string
-* Check palindrome
-* Anagram
-* Longest common prefix
-* Pattern matching
+- Reverse string
+- Check palindrome
+- Anagram
+- Longest common prefix
+- Pattern matching
 
 ---
 
@@ -98,26 +100,26 @@ Why DSA matters for interviews:
 
 ### Types
 
-* Singly
-* Doubly
-* Circular
+- Singly
+- Doubly
+- Circular
 
 ### Operations
 
-* Insert at head / tail
-* Delete node
-* Reverse linked list
+- Insert at head / tail
+- Delete node
+- Reverse linked list
 
 ### Important Problems
 
-* Detect cycle (Floyd’s algo)
-* Find middle node
-* Merge two sorted lists
+- Detect cycle (Floyd’s algo)
+- Find middle node
+- Merge two sorted lists
 
 Time Complexity:
 
-* Access: O(n)
-* Insert/Delete: O(1)
+- Access: O(n)
+- Insert/Delete: O(1)
 
 ---
 
@@ -129,21 +131,21 @@ Time Complexity:
 
 ### Operations
 
-* push
-* pop
-* peek
+- push
+- pop
+- peek
 
 ### Applications
 
-* Expression evaluation
-* Undo/Redo
-* Valid parentheses
+- Expression evaluation
+- Undo/Redo
+- Valid parentheses
 
 ### Important Problems
 
-* Next Greater Element
-* Stock Span
-* Min Stack
+- Next Greater Element
+- Stock Span
+- Min Stack
 
 ---
 
@@ -155,15 +157,15 @@ Time Complexity:
 
 ### Types
 
-* Simple Queue
-* Circular Queue
-* Deque
-* Priority Queue
+- Simple Queue
+- Circular Queue
+- Deque
+- Priority Queue
 
 ### Applications
 
-* CPU scheduling
-* BFS
+- CPU scheduling
+- BFS
 
 ---
 
@@ -175,15 +177,15 @@ Key → Value mapping using hash function
 
 ### Time Complexity
 
-* Average: O(1)
-* Worst: O(n)
+- Average: O(1)
+- Worst: O(n)
 
 ### Important Problems
 
-* Frequency count
-* Two Sum
-* Longest subarray with sum K
-* First non‑repeating element
+- Frequency count
+- Two Sum
+- Longest subarray with sum K
+- First non‑repeating element
 
 ---
 
@@ -197,10 +199,10 @@ Function calling itself
 
 ### Problems
 
-* Factorial
-* Fibonacci
-* Power(x, n)
-* Subsets
+- Factorial
+- Fibonacci
+- Power(x, n)
+- Subsets
 
 ---
 
@@ -208,28 +210,28 @@ Function calling itself
 
 ### Terminology
 
-* Root
-* Parent / Child
-* Leaf
-* Height / Depth
+- Root
+- Parent / Child
+- Leaf
+- Height / Depth
 
 ### Types
 
-* Binary Tree
-* Binary Search Tree (BST)
+- Binary Tree
+- Binary Search Tree (BST)
 
 ### Traversals
 
-* Inorder
-* Preorder
-* Postorder
-* Level Order
+- Inorder
+- Preorder
+- Postorder
+- Level Order
 
 ### Important Problems
 
-* Height of tree
-* Diameter
-* Lowest Common Ancestor
+- Height of tree
+- Diameter
+- Lowest Common Ancestor
 
 ---
 
@@ -241,14 +243,14 @@ Left < Root < Right
 
 ### Operations
 
-* Insert
-* Search
-* Delete
+- Insert
+- Search
+- Delete
 
 Time Complexity:
 
-* Average: O(log n)
-* Worst: O(n)
+- Average: O(log n)
+- Worst: O(n)
 
 ---
 
@@ -256,13 +258,13 @@ Time Complexity:
 
 ### Types
 
-* Min Heap
-* Max Heap
+- Min Heap
+- Max Heap
 
 ### Applications
 
-* Priority Queue
-* Kth largest element
+- Priority Queue
+- Kth largest element
 
 ---
 
@@ -270,19 +272,19 @@ Time Complexity:
 
 ### Representation
 
-* Adjacency List
-* Adjacency Matrix
+- Adjacency List
+- Adjacency Matrix
 
 ### Traversals
 
-* BFS
-* DFS
+- BFS
+- DFS
 
 ### Important Problems
 
-* Cycle detection
-* Shortest path
-* Connected components
+- Cycle detection
+- Shortest path
+- Connected components
 
 ---
 
@@ -300,8 +302,8 @@ Time Complexity:
 
 ## 15. Searching Algorithms
 
-* Linear Search → O(n)
-* Binary Search → O(log n)
+- Linear Search → O(n)
+- Binary Search → O(log n)
 
 ---
 
@@ -313,9 +315,9 @@ Choose best option at each step
 
 ### Problems
 
-* Activity Selection
-* Coin Change
-* Fractional Knapsack
+- Activity Selection
+- Coin Change
+- Fractional Knapsack
 
 ---
 
@@ -327,15 +329,15 @@ Overlapping subproblems + optimal substructure
 
 ### Approaches
 
-* Memoization (Top‑Down)
-* Tabulation (Bottom‑Up)
+- Memoization (Top‑Down)
+- Tabulation (Bottom‑Up)
 
 ### Important Problems
 
-* Fibonacci
-* Knapsack
-* LIS
-* LCS
+- Fibonacci
+- Knapsack
+- LIS
+- LCS
 
 ---
 
@@ -343,15 +345,15 @@ Overlapping subproblems + optimal substructure
 
 ### Operators
 
-* AND (&)
-* OR (|)
-* XOR (^)
+- AND (&)
+- OR (|)
+- XOR (^)
 
 ### Problems
 
-* Check even/odd
-* Single number
-* Power of two
+- Check even/odd
+- Single number
+- Power of two
 
 ---
 
@@ -359,31 +361,31 @@ Overlapping subproblems + optimal substructure
 
 ### Used For
 
-* Subarrays
-* Strings
+- Subarrays
+- Strings
 
 ### Problems
 
-* Longest substring without repeating
-* Max sum subarray of size K
+- Longest substring without repeating
+- Max sum subarray of size K
 
 ---
 
 ## 20. Interview Preparation Tips
 
-* Master Arrays, Strings, Hashing
-* Practice daily (LeetCode)
-* Focus on patterns
-* Analyze time & space
+- Master Arrays, Strings, Hashing
+- Practice daily (LeetCode)
+- Focus on patterns
+- Analyze time & space
 
 ---
 
 ## 21. Best Platforms
 
-* LeetCode
-* Codeforces
-* GeeksforGeeks
-* InterviewBit
+- LeetCode
+- Codeforces
+- GeeksforGeeks
+- InterviewBit
 
 ---
 
