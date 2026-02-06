@@ -6,17 +6,16 @@
 2. Algorithm
 3. String
 4. Recursion
-5. Pattern Programming
-6. Link List
-7. Stack
-8. Queue
-9. HashMap
+5. Link List
+6. Stack
+7. Queue
+8. HashMap
 
 <!-- learn About it -->
 
-10. Tree
-11. Graph
-12. Dynamic Programming
+9. Tree
+10. Graph
+11. Dynamic Programming
 
 # Data Structures & Algorithms (DSA) — Complete Notes
 
