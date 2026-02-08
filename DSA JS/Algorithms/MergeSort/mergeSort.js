@@ -1,31 +1,31 @@
 function mergeSort(arr) {
-  if (arr.length <= 1) return arr; // base case
+  if (arr.length <= 1) return arr
 
-  const mid = Math.floor(arr.length / 2);
+  let mid = Math.floor(arr.length / 2)
 
-  const left = mergeSort(arr.slice(0, mid));  // left half
-  const right = mergeSort(arr.slice(mid));    // right half
+  let left = mergeSort(arr.slice(0, mid))
+  let right = mergeSort(arr.slice(mid))
 
-  return merge(left, right); // merge two sorted halves
+  return merge(left, right)
 }
 
 function merge(left, right) {
-  let result = [];
-  let i = 0;
-  let j = 0;
+  let i = 0,
+    j = 0
+
+  let result = []
 
   while (i < left.length && j < right.length) {
-    if (left[i] < right[j]) { // compare left & right
-      result.push(left[i]);
-      i++;
+    if (left[i] < right[j]) {
+      result.push(left[i])
+      i++
     } else {
-      result.push(right[j]);
-      j++;
+      result.push(right[j])
+      j++
     }
   }
 
-  // push remaining elements if any
-  return result.concat(left.slice(i)).concat(right.slice(j));
+  return result.concat(left.slice(i)).concat(right.slice(j))
 }
 
-console.log(mergeSort([6, 3, 1, 5, 2, 4]));
+console.log(mergeSort([6, 3, 1, 5, 2, 4]))

@@ -29,7 +29,6 @@ Because on average, it sorts very fast due to:
 
 1. Choose a pivot (first / last / middle / random)
 2. Partition the array so that:
-
    - Elements < pivot → left
    - Elements > pivot → right
 
@@ -74,7 +73,7 @@ function quickSort(arr) {
   let left = []
   let right = []
 
-  for (let i = 0; i < arr.length - 1; i++) {
+  for (let i = 0; i < arr.length; i++) {
     if (arr[i] < pivot) left.push(arr[i])
     else right.push(arr[i])
   }
