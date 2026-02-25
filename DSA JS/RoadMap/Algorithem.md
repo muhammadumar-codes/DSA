@@ -308,6 +308,11 @@ FIFO Structure.
 - LCA
 - BST operations
 - Validate BST
+- Count of nodes
+- sum of all nodes
+- Hight of the tree
+- Diameter of the tree
+- sum of all tree kth level
 
 Time: O(n)
 
