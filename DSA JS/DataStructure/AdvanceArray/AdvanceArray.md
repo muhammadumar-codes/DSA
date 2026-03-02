@@ -6,8 +6,8 @@
 
 An **Array** is a linear data structure that stores multiple values in a sequence and allows access using **0-based indexing**.
 
-* Linear → Elements stored one after another
-* Indexed → Access using position
+- Linear → Elements stored one after another
+- Indexed → Access using position
 
 ```js
 const arr = []
@@ -21,11 +21,11 @@ console.log(arr[0])
 
 # 2️⃣ Important Properties
 
-* Index starts from 0
-* Arrays are dynamic in JavaScript
-* Can store mixed data types
-* Internally arrays are objects
-* typeof [] === "object"
+- Index starts from 0
+- Arrays are dynamic in JavaScript
+- Can store mixed data types
+- Internally arrays are objects
+- typeof [] === "object"
 
 ```js
 const mixed = [1, 'two', true, null]
@@ -150,9 +150,10 @@ for (let i = arr.length - 1; i >= 0; i--) {
 ## In-place (Best)
 
 ```js
-let i = 0, j = arr.length - 1
+let i = 0,
+  j = arr.length - 1
 while (i < j) {
-  [arr[i], arr[j]] = [arr[j], arr[i]]
+  ;[arr[i], arr[j]] = [arr[j], arr[i]]
   i++
   j--
 }
@@ -227,7 +228,8 @@ Time: O(n) | Space: O(1)
 
 ```js
 function merge(arr1, arr2) {
-  let i = 0, j = 0
+  let i = 0,
+    j = 0
   const result = []
 
   while (i < arr1.length && j < arr2.length) {
@@ -269,11 +271,12 @@ Time: O(n) | Space: O(1)
 
 ```js
 function majorityElement(arr) {
-  let count = 0, candidate = null
+  let count = 0,
+    candidate = null
 
   for (let num of arr) {
     if (count === 0) candidate = num
-    count += (num === candidate) ? 1 : -1
+    count += num === candidate ? 1 : -1
   }
 
   return candidate
@@ -287,15 +290,17 @@ Time: O(n) | Space: O(1)
 # 1️⃣5️⃣ Dutch National Flag (Sort 0,1,2)
 
 ```js
-let low = 0, mid = 0, high = arr.length - 1
+let low = 0,
+  mid = 0,
+  high = arr.length - 1
 
 while (mid <= high) {
   if (arr[mid] === 0) {
-    [arr[low], arr[mid]] = [arr[mid], arr[low]]
+    ;[arr[low], arr[mid]] = [arr[mid], arr[low]]
     low++
     mid++
   } else if (arr[mid] === 2) {
-    [arr[mid], arr[high]] = [arr[high], arr[mid]]
+    ;[arr[mid], arr[high]] = [arr[high], arr[mid]]
     high--
   } else {
     mid++
@@ -311,7 +316,8 @@ Time: O(n) | Space: O(1)
 
 ```js
 function twoSum(arr, target) {
-  let i = 0, j = arr.length - 1
+  let i = 0,
+    j = arr.length - 1
 
   while (i < j) {
     let sum = arr[i] + arr[j]
@@ -343,12 +349,12 @@ function twoSum(arr, target) {
 
 # 🧠 Interview Patterns Summary
 
-* Rotation → Modulo logic
-* Sorted array → Two pointers
-* Subarray sum → Kadane
-* Frequency dominance → Moore Voting
-* 0/1/2 sorting → Three pointers
-* Merge arrays → Two pointers
+- Rotation → Modulo logic
+- Sorted array → Two pointers
+- Subarray sum → Kadane
+- Frequency dominance → Moore Voting
+- 0/1/2 sorting → Three pointers
+- Merge arrays → Two pointers
 
 ---
 
