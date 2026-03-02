@@ -329,6 +329,21 @@ function twoSum(arr, target) {
 
   return []
 }
+
+// 2️⃣ Palindrome Number
+
+function Palindram(nums) {
+  let origianl = nums
+  let reverse = 0
+
+  while (nums > 0) {
+    let lastDigit = nums % 10
+    reverse = reverse * 10 + lastDigit
+    nums = Math.floor(nums / 10)
+  }
+
+  return origianl === reverse
+}
 ```
 
 ---
