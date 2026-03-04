@@ -200,7 +200,22 @@ for (let i = 0; i < arr.length; i++) {
 }
 ```
 
----
+````js
+// Right rotation
+
+function rotateRight(array, k) {
+let n = array.length
+let temp = new Array(n)
+k = k % n
+
+for (let index = 0; index < n; index++) {
+temp[(index + k) % n] = array[index]
+}
+
+console.log(temp)
+}
+
+## rotateRight([1,2,3,4,5], 3)
 
 # 1️⃣1️⃣ Remove Duplicates (Sorted Array)
 
@@ -218,7 +233,7 @@ function removeDuplicates(arr) {
   arr.length = j + 1
   return arr
 }
-```
+````
 
 Time: O(n) | Space: O(1)
 
@@ -227,20 +242,36 @@ Time: O(n) | Space: O(1)
 # 1️⃣2️⃣ Merge Two Sorted Arrays
 
 ```js
-function merge(arr1, arr2) {
-  let i = 0,
-    j = 0
-  const result = []
+function mergeArray(array1, array2) {
+  let i = 0
+  let j = 0
+  let merge = []
 
-  while (i < arr1.length && j < arr2.length) {
-    result.push(arr1[i] < arr2[j] ? arr1[i++] : arr2[j++])
+  while (i < array1.length && j < array2.length) {
+    if (array1[i] < array2[j]) {
+      merge.push(array1[i])
+      i++
+    } else {
+      merge.push(array2[j])
+      j++
+    }
   }
 
-  while (i < arr1.length) result.push(arr1[i++])
-  while (j < arr2.length) result.push(arr2[j++])
+  // remaining elements
+  while (i < array1.length) {
+    merge.push(array1[i])
+    i++
+  }
 
-  return result
+  while (j < array2.length) {
+    merge.push(array2[j])
+    j++
+  }
+
+  return merge
 }
+
+console.log(mergeArray([1, 2, 3, 4], [5, 6, 7, 8]))
 ```
 
 Time: O(n + m)
