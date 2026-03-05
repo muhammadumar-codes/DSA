@@ -278,21 +278,32 @@ Time: O(n + m)
 
 ---
 
+z`
+
 # 1️⃣3️⃣ Kadane’s Algorithm (Maximum Subarray)
 
-```js
-function maxSubArray(arr) {
-  let current = arr[0]
-  let maxSum = arr[0]
+````js
+function kadane(arr) {
 
-  for (let i = 1; i < arr.length; i++) {
-    current = Math.max(arr[i], current + arr[i])
-    maxSum = Math.max(maxSum, current)
-  }
+let currentSum = 0
+let maxSum = -Infinity
 
-  return maxSum
+for(let num of arr){
+
+currentSum += num
+
+maxSum = Math.max(maxSum, currentSum)
+
+if(currentSum < 0){
+currentSum = 0
 }
-```
+
+}
+
+return maxSum
+}
+
+console.log(kadane([-2,3,-1,4,-5]))```
 
 Time: O(n) | Space: O(1)
 
@@ -312,7 +323,7 @@ function majorityElement(arr) {
 
   return candidate
 }
-```
+````
 
 Time: O(n) | Space: O(1)
 
