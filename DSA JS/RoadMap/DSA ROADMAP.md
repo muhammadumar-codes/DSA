@@ -5,11 +5,11 @@
 1. Array With Advance Array ✅
 2. String
 3. Algorithm
-4. Recursion
-5. Link List
-6. Stack
-7. Queue
-8. HashMap
+4. Link List
+5. Stack
+6. Queue
+7. HashMap
+8. Recursion
 9. Tree
 10. Graph
 11. Dynamic Programming
