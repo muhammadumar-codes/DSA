@@ -284,26 +284,23 @@ z`
 
 ````js
 function kadane(arr) {
+  let currentSum = 0
+  let maxSum = -Infinity
 
-let currentSum = 0
-let maxSum = -Infinity
+  for (let num of arr) {
+    currentSum += num
 
-for(let num of arr){
+    maxSum = Math.max(maxSum, currentSum)
 
-currentSum += num
+    if (currentSum < 0) {
+      currentSum = 0
+    }
+  }
 
-maxSum = Math.max(maxSum, currentSum)
-
-if(currentSum < 0){
-currentSum = 0
+  return maxSum
 }
 
-}
-
-return maxSum
-}
-
-console.log(kadane([-2,3,-1,4,-5]))```
+console.log(kadane([-2, 3, -1, 4, -5]))```
 
 Time: O(n) | Space: O(1)
 
@@ -311,14 +308,22 @@ Time: O(n) | Space: O(1)
 
 # 1️⃣4️⃣ Majority Element (Moore’s Voting)
 
-```js
+```
+
 function majorityElement(arr) {
-  let count = 0,
-    candidate = null
+  let count = 0
+  let candidate = null
 
   for (let num of arr) {
-    if (count === 0) candidate = num
-    count += num === candidate ? 1 : -1
+    if (count === 0) {
+      candidate = num
+    }
+
+    if (num === candidate) {
+      count++
+    } else {
+      count--
+    }
   }
 
   return candidate
