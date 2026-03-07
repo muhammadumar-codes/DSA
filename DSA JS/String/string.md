@@ -319,6 +319,7 @@ Handle non-letters unchanged.
 js
 
 ```js
+
 function toggleString(str) {
   let result = '';
   for (let i = 0; i < str.length; i++) {
@@ -370,6 +371,23 @@ Time: O(n) | Space: O(1) (fixed array).
 Alternative (Object-Based):
 
 js
+
+
+function frequencyCoun(string) {
+  let counter = {}
+
+  for (let i = 0; i < string.length; i++) {
+    if (counter[string[i]]) {
+      counter[string[i]] += 1
+    } else {
+      counter[string[i]] = 1
+    }
+  }
+
+  return counter
+}
+
+console.log(frequencyCoun('google'))
 
 ```js
 function frequencyCount(str) {
