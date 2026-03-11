@@ -446,6 +446,29 @@ console.log(lengthOfLongestSubstring("hellhellhell"))
 
 
 
+## String Matching
+
+
+var strStr = function (haystack, needle) {
+
+    for (let i = 0; i <= haystack.length - needle.length; i++) {
+
+        let j = 0
+
+        while (j < needle.length && haystack[i + j] === needle[j]) {
+            j++
+        }
+
+        if (j === needle.length) {
+            return i
+        }
+    }
+
+    return -1
+};
+
+
+
 console.log(isAnagram('listen', 'silent'));  // true
 Time: O(n) | Space: O(1) (fixed alphabet).
 
