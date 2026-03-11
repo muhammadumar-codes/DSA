@@ -416,6 +416,36 @@ function isAnagram(s, t) {
   return true;
 }
 
+
+
+## Longest Substring Without Repeating
+
+function lengthOfLongestSubstring(s) {
+
+  let maxLength = 0
+  let set = new Set()
+  let left = 0
+
+  for (let right = 0; right < s.length; right++) {
+
+    while (set.has(s[right])) {
+      set.delete(s[left])
+      left++
+    }
+
+    set.add(s[right])
+
+    maxLength = Math.max(maxLength, right - left + 1)
+  }
+
+  return maxLength
+}
+
+console.log(lengthOfLongestSubstring("hellhellhell"))
+
+
+
+
 console.log(isAnagram('listen', 'silent'));  // true
 Time: O(n) | Space: O(1) (fixed alphabet).
 
