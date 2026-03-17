@@ -20,7 +20,7 @@ It works by:
 
 > "Divide until one element remains, then merge in sorted order."
 
-✔ Single elements are always sorted  
+✔ Single elements are always sorted
 ✔ The main work happens during **merge**
 
 ---
@@ -97,12 +97,15 @@ function merge(left, right) {
     }
   }
 
+// return the result and concate the left and right array in
+
   return result
     .concat(left.slice(i))
     .concat(right.slice(j))
 }
 
 console.log(mergeSort([6, 3, 1, 5, 2, 4]))
+
 🧪 Dry Run (Interview Favorite)
 Array:
 
