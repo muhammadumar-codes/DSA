@@ -124,3 +124,28 @@ console.log(result) // 4
 - Binary Search is **fast & efficient**
 - Works only on **sorted arrays**
 - Reduces complexity from **O(n) → O(log n)**
+
+<!-- Binary Search Using Recursion -->
+
+```js
+function binarySearch(low, high, array, target) {
+  // base case
+  if (low > high) return -1
+
+  let mid = Math.floor(low + high / 2)
+
+  if (array[mid] === target) return mid
+  else if (array[mid] < target) {
+    return binarySearch(low + 1, high, array, target)
+  } else {
+    return binarySearch(low, high - 1, array, target)
+  }
+}
+
+const array = [1, 2, 3, 4, 5]
+let low = 0
+let high = array.length - 1
+let target = 5
+
+console.log(binarySearch(low, high, array, target))
+```

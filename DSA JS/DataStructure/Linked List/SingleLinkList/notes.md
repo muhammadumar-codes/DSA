@@ -480,6 +480,9 @@ let fast = this.head;
 // ----------------------------
 // Detect Cycle (Loop)
 // ----------------------------
+
+Using ==> Floyd's Tortoise and Hare Algorithm
+
 hasCycle() {
 let slow = this.head;
 let fast = this.head;
