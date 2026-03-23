@@ -2,7 +2,7 @@
 
 <!-- Revice The Topics -->
 
-1. Array With Advance Arra
+1. Array
 2. String
 3. Algorithm
 4. Link List

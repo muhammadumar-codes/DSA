@@ -88,7 +88,7 @@ Time: O(n)
 
 # 6️⃣ Maximum Element
 
-```js
+````js
 function maximum(arr) {
   let max = arr[0]
   for (let i = 1; i < arr.length; i++) {
@@ -96,7 +96,7 @@ function maximum(arr) {
   }
   return max
 }
-```
+```z`
 
 Time: O(n) | Space: O(1)
 
@@ -109,7 +109,7 @@ let min = arr[0]
 for (let i = 1; i < arr.length; i++) {
   if (arr[i] < min) min = arr[i]
 }
-```
+````
 
 ---
 
