@@ -202,9 +202,9 @@ for (let i = 0; i < arr.length; i++) {
 
 ````js
 // Right rotation
-
 function rotateRight(array, k) {
 let n = array.length
+
 let temp = new Array(n)
 k = k % n
 
@@ -336,7 +336,7 @@ Time: O(n) | Space: O(1)
 
 # 1️⃣5️⃣ Dutch National Flag (Sort 0,1,2)
 
-```js
+```jsz
 let low = 0,
   mid = 0,
   high = arr.length - 1
@@ -362,21 +362,19 @@ Time: O(n) | Space: O(1)
 # 1️⃣6️⃣ Two Sum (Sorted Array - Two Pointer)
 
 ```js
-function twoSum(arr, target) {
-  let i = 0,
-    j = arr.length - 1
+function twoSum(nums, target) {
+  let map = new Map()
 
-  while (i < j) {
-    let sum = arr[i] + arr[j]
+  for (let i = 0; i < nums.length; i++) {
+    let needed = target - nums[i]
 
-    if (sum === target) return [i, j]
-    else if (sum < target) i++
-    else j--
+    if (map.has(needed)) {
+      return [map.get(needed), i]
+    }
+
+    map.set(nums[i], i)
   }
-
-  return []
 }
-
 // 2️⃣ Palindrome Number
 
 function Palindram(nums) {
