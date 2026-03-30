@@ -309,25 +309,6 @@ Time: O(n) | Space: O(1)
 # 1️⃣4️⃣ Majority Element (Moore’s Voting)
 
 ```
-
-function majorityElement(arr) {
-  let count = 0
-  let candidate = null
-
-  for (let num of arr) {
-    if (count === 0) {
-      candidate = num
-    }
-
-    if (num === candidate) {
-      count++
-    } else {
-      count--
-    }
-  }
-
-  return candidate
-}
 ````
 
 Time: O(n) | Space: O(1)
@@ -390,6 +371,26 @@ function Palindram(nums) {
   return origianl === reverse
 }
 ```
+
+function majorityElement(arr) {
+let count = 0
+let candidate = null
+
+for (let num of arr) {
+if (count === 0) {
+candidate = num
+}
+
+    if (num === candidate) {
+      count++
+    } else {
+      count--
+    }
+
+}
+
+return candidate
+}
 
 ---
 
