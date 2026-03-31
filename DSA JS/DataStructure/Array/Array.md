@@ -372,26 +372,6 @@ function Palindram(nums) {
 }
 ```
 
-function majorityElement(arr) {
-let count = 0
-let candidate = null
-
-for (let num of arr) {
-if (count === 0) {
-candidate = num
-}
-
-    if (num === candidate) {
-      count++
-    } else {
-      count--
-    }
-
-}
-
-return candidate
-}
-
 ---
 
 # 📊 Complexity Cheat Sheet
