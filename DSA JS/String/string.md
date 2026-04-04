@@ -496,8 +496,8 @@ New string
 Interview Tip (VERY IMPORTANT)
 💡 Strings behave like arrays but are immutable. Always create new strings for "modifications." Think in terms of Two Pointers (palindromes), Frequency Maps (anagrams/counts), or Sliding Window (substrings). Master ASCII for custom logic. Edge cases: empty strings, mixed case, special chars. Practice on LeetCode for speed.
 
-Additional Code Examples
-Anagram Check
+  Additional Code Examples
+  Anagram Check
 js
 
 ```js
