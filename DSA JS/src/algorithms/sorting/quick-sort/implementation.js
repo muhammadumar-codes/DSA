@@ -1,18 +1,23 @@
-function quickSort(array) {
-  let pivot = array[array.length - 1]
-  let left = []
-  let right = []
+function quickSort(values) {
+  if (values.length <= 1) {
+    return [...values]
+  }
 
-  if (array.length <= 1) return array
+  const pivot = values[values.length - 1]
+  const left = []
+  const right = []
 
-  for (let i = 0; i < array.length - 1; i++) {
-    if (array[i] < pivot) {
-      left.push(array[i])
+  for (let index = 0; index < values.length - 1; index += 1) {
+    if (values[index] < pivot) {
+      left.push(values[index])
     } else {
-      right.push(array[i])
+      right.push(values[index])
     }
   }
-  return [...quickSort(left), ...quickSort(right)]
+
+  return [...quickSort(left), pivot, ...quickSort(right)]
 }
 
-console.log(quickSort([4, 3, 2, 1]))
+module.exports = {
+  quickSort,
+}
